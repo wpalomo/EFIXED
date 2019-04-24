@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B7A25BB-77A7-4972-902D-50D8E0F8271C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FirmElect.Data</RootNamespace>
+    <AssemblyName>FirmElect.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conte_con_efixed.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Conte_con_efixed.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conte_con_efixed.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Conte_con_efixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conte_con_efixed.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Conte_con_efixed.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Factura.cs">
+      <DependentUpon>Model_facturacion_eventos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fa_elec_registros_generados.cs">
+      <DependentUpon>Conte_con_efixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fx_GeneradorXML_IGuia.cs" />
+    <Compile Include="fx_Comprobante_generados_Data.cs" />
+    <Compile Include="fx_GeneradorXML_IFacturas_Data.cs" />
+    <Compile Include="fx_GeneradorXMl_IGuiaRemision_Data.cs" />
+    <Compile Include="fx_GeneradorXML_IRetencion.cs" />
+    <Compile Include="fx_GeneradorXML_INotaCredito.cs" />
+    <Compile Include="fx_GeneradorXML_NotaCredito_DinamicsAX.cs" />
+    <Compile Include="fx_GeneradorXML_NotaDebito.cs" />
+    <Compile Include="fx_GeneradorXML_Retencion_DinamicsAX.cs" />
+    <Compile Include="fx_Generador_XML_Factura_DinamicsAX.cs" />
+    <Compile Include="fx_horario_Data.cs" />
+    <Compile Include="fx_IComprobanteId_Data.cs" />
+    <Compile Include="fx_Ihorario_Data.cs" />
+    <Compile Include="Imail_Cuentas_Correo_Data.cs" />
+    <Compile Include="Imail_Cuentas_Correo_x_Empresa_Data.cs" />
+    <Compile Include="Imail_Mensaje_Archi_Adjunto_Data.cs" />
+    <Compile Include="Itb_Actividades_Horario_Acciones_Data.cs" />
+    <Compile Include="Itb_Actividades_Horario_Data.cs" />
+    <Compile Include="Itb_Actividades_Horario_Tipo_Ejecucion_Data.cs" />
+    <Compile Include="Itb_Actividades_Horario_Tipo_Tiempo_Data.cs" />
+    <Compile Include="Itb_Comprobante_Hist_Eliminado_Data.cs" />
+    <Compile Include="Itb_Comprobante_Procesos_externos.cs" />
+    <Compile Include="Itb_Contribuyente_Data.cs" />
+    <Compile Include="mail_Catalogo.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mail_Catalogo_Data.cs" />
+    <Compile Include="mail_Catalogo_Tipo.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mail_Cuentas_Correo.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mail_Cuentas_Correo_Data.cs" />
+    <Compile Include="mail_Cuentas_Correo_x_Empresa.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mail_Cuentas_Correo_x_Empresa_Data.cs" />
+    <Compile Include="mail_Mensaje.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mail_Mensaje_Archi_Adjunto.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mail_Mensaje_Archi_Adjunto_Data.cs" />
+    <Compile Include="mail_Mensaje_Data.cs" />
+    <Compile Include="mail_Mensaje_Tipo.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mail_Parametro.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mail_Parametro_Data.cs" />
+    <Compile Include="mail_plantilla_correo_x_cuenta.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntitiesFactElectronica.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEntitiesFactElectronica.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntitiesFactElectronica.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntitiesFactElectronica.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEntitiesFactElectronica.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model_facturacion_eventos.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_facturacion_eventos.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_facturacion_eventos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_facturacion_eventos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_facturacion_eventos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_facturacion_eventos.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Proceso_efixed\fx_GeneradorXML_NotaDebito_Fixed.cs" />
+    <Compile Include="Proceso_efixed\fx_Generador_XML_Guia_Fixed.cs" />
+    <Compile Include="Proceso_efixed\fx_GeneradorXML_NotaCredito_Fixed.cs" />
+    <Compile Include="Proceso_efixed\fx_GeneradorXML_Retencion_Fixed.cs" />
+    <Compile Include="Proceso_efixed\fx_Generador_XML_Factura_Fixed.cs" />
+    <Compile Include="seg_menu.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="seg_menu_data.cs" />
+    <Compile Include="seg_menu_x_tb_empresa_data.cs" />
+    <Compile Include="seg_menu_x_tb_empresa_x_seg_usuario_data.cs" />
+    <Compile Include="seg_menu_x_tb_empresa.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="seg_menu_x_tb_empresa_x_seg_usuario.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="seg_usuario.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="seg_usuario_data.cs" />
+    <Compile Include="seg_usuario_x_tb_empresa.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="seg_usuario_x_tb_empresa_data.cs" />
+    <Compile Include="sp_consulta_x_CbteVALI_FIRM_REC_x_Pagina_Result.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_comprobante_x_valor.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_comprobante_x_valor_Data.cs" />
+    <Compile Include="tb_facturas_eventos.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_FormaPago.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_FormaPago_Data.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="sp_consulta_x_cbtes_x_paginas_Data.cs" />
+    <Compile Include="sp_consulta_x_cbtes_x_paginas_Result.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_consulta_x_Cbte_Recibidos_x_Pagina_Result.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_consulta_x_Mensaje_x_Pagina_Result.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_VerificarRecuperaciondeContrasenia_Result.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Actividades_Horario.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Actividades_Horario_Acciones.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Actividades_Horario_Acciones_Data_SQL.cs" />
+    <Compile Include="tb_Actividades_Horario_Data_SQL.cs" />
+    <Compile Include="tb_Actividades_Horario_Tipo_Ejecucion.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Actividades_Horario_Tipo_Ejecucion_Data_SQL.cs" />
+    <Compile Include="tb_Actividades_Horario_Tipo_Tiempo.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Actividades_Horario_Tipo_Tiempo_Data_SQL.cs" />
+    <Compile Include="tb_Catalogo.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Catalogo_Data.cs" />
+    <Compile Include="tb_Catalogo_tipo.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Clave_Conting.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Clave_Conting_Data.cs" />
+    <Compile Include="tb_Cliente_Data.cs" />
+    <Compile Include="tb_Comprobante.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_comprobantes_No_Generados.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Comprobante_Data.cs" />
+    <Compile Include="tb_Comprobante_estado_proceso.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_comprobante_exportado_base_ext.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_comprobante_exportado_base_ext_Data.cs" />
+    <Compile Include="tb_Comprobante_Hist_Eliminado.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Comprobante_Hist_Eliminado_Data.cs" />
+    <Compile Include="tb_Comprobante_Procesos_externos_ALEMAN.CS" />
+    <Compile Include="tb_Comprobante_Procesos_externos_ExpoGye.cs" />
+    <Compile Include="tb_Comprobante_Procesos_externos_GRAFINPREN.cs" />
+    <Compile Include="tb_Comprobante_Procesos_externos_NATURISA.CS" />
+    <Compile Include="tb_Comprobante_tipo.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Comprobante_tipo_Data.cs" />
+    <Compile Include="tb_Comprobante_tipo_estado.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Comprobante_tipo_x_empresa.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Comprobante_tipo_x_empresa_Data.cs" />
+    <Compile Include="tb_Contribuyente.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Contribuyente_Data.cs" />
+    <Compile Include="tb_directorio.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_directorio_Data.cs" />
+    <Compile Include="tb_Empresa.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Empresa_Data.cs" />
+    <Compile Include="tb_Empresa_externa.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Empresa_externa_Data.cs" />
+    <Compile Include="tb_Error_sri.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Parametro.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Parametro_Data.cs" />
+    <Compile Include="tb_sis_Log_Error_Vzen.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_sis_Log_Error_Vzen_Data.cs" />
+    <Compile Include="tb_Sucursal.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Tocken.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Tocken_Data.cs" />
+    <Compile Include="tb_Tocken_x_Usuario_Tocken.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_tocken_x_usuario_tocken_Data.cs" />
+    <Compile Include="tb_Usuario.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_usuario_Data.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tb_Usuario_Tocken.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Usuario_Tocken_Data.cs" />
+    <Compile Include="vwFacturas_fac_electronica.cs">
+      <DependentUpon>Model_facturacion_eventos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwfe_factura.cs">
+      <DependentUpon>Conte_con_efixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwfe_factura_detalle.cs">
+      <DependentUpon>Conte_con_efixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwfe_factura_impuestos.cs">
+      <DependentUpon>Conte_con_efixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwfe_guia_remision.cs">
+      <DependentUpon>Conte_con_efixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwfe_guia_remision_detalle.cs">
+      <DependentUpon>Conte_con_efixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwfe_guia_remision_x_factura.cs">
+      <DependentUpon>Conte_con_efixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwfe_nota_credito.cs">
+      <DependentUpon>Conte_con_efixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwfe_nota_credito_detalle.cs">
+      <DependentUpon>Conte_con_efixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwfe_nota_credito_impuestos.cs">
+      <DependentUpon>Conte_con_efixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwfe_nota_debito.cs">
+      <DependentUpon>Conte_con_efixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwfe_nota_debito_detalle.cs">
+      <DependentUpon>Conte_con_efixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwfe_nota_debito_impuestos.cs">
+      <DependentUpon>Conte_con_efixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwfe_retencion.cs">
+      <DependentUpon>Conte_con_efixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwfe_retencion_detalle.cs">
+      <DependentUpon>Conte_con_efixed.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwseg_menu_x_tb_empresa_x_seg_usuario.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwseg_usuario_x_tb_empresa.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwSerWeb_Comprobante.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwtb_Comprobante_para_exportar.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Comprobante.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Comprobantes_recibidos.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Comprobantes_recibidos_Data.cs" />
+    <Compile Include="vw_Comprobante_Autorizados_Enviados_NoEnviados_mail.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_comprobante_pendiente_de_Autorizacion_sri.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Comprobante_Tipo.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_mail_Cuentas_Correo_x_mail_Mensaje_Tipo.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_mail_Cuentas_Correo_x_mail_Mensaje_Tipo_Data.cs" />
+    <Compile Include="vw_Mensaje_x_Contribuyente.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="wv_mail_Cuentas_Correo_x_Empresa.cs">
+      <DependentUpon>ModelEntitiesFactElectronica.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="ModelEntitiesFactElectronica.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelEntitiesFactElectronica.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Conte_con_efixed.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Conte_con_efixed.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Conte_con_efixed.edmx.diagram">
+      <DependentUpon>Conte_con_efixed.edmx</DependentUpon>
+    </None>
+    <None Include="ModelEntitiesFactElectronica.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelEntitiesFactElectronica.edmx</DependentUpon>
+      <LastGenOutput>ModelEntitiesFactElectronica.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ModelEntitiesFactElectronica.edmx.diagram">
+      <DependentUpon>ModelEntitiesFactElectronica.edmx</DependentUpon>
+    </None>
+    <None Include="ModelEntitiesFactElectronica.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelEntitiesFactElectronica.edmx</DependentUpon>
+      <LastGenOutput>ModelEntitiesFactElectronica.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="Model_facturacion_eventos.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model_facturacion_eventos.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model_facturacion_eventos.edmx.diagram">
+      <DependentUpon>Model_facturacion_eventos.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FirmElect.Info\FirmElect.Info.csproj">
+      <Project>{a739beee-cd06-4647-84a4-8e76bed4a54a}</Project>
+      <Name>FirmElect.Info</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FirmElect.Recursos\FirmElect.Recursos.csproj">
+      <Project>{5ae804f3-3ee4-4fc9-be51-6e92956f6084}</Project>
+      <Name>FirmElect.Recursos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Conte_con_efixed.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Conte_con_efixed.edmx</DependentUpon>
+      <LastGenOutput>Conte_con_efixed.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Conte_con_efixed.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Conte_con_efixed.edmx</DependentUpon>
+      <LastGenOutput>Conte_con_efixed.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model_facturacion_eventos.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_facturacion_eventos.edmx</DependentUpon>
+      <LastGenOutput>Model_facturacion_eventos.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model_facturacion_eventos.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_facturacion_eventos.edmx</DependentUpon>
+      <LastGenOutput>Model_facturacion_eventos.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

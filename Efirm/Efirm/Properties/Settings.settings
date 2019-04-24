@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Efirm.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="P_ESTADO_CARGA_EFIRM" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SERVER</Value>
+    </Setting>
+    <Setting Name="MOSTRAR_CONSOLA" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">N</Value>
+    </Setting>
+    <Setting Name="AUTORIZADO_ENVIO_CORREO" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">S</Value>
+    </Setting>
+    <Setting Name="Formato_fecha" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">{0:yyyy/MM/dd}</Value>
+    </Setting>
+    <Setting Name="Version" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">201505291800</Value>
+    </Setting>
+    <Setting Name="Formato_fecha_xml_sri" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">{0:dd/MM/yyyy}</Value>
+    </Setting>
+    <Setting Name="PatchMaqLocalXML" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\</Value>
+    </Setting>
+    <Setting Name="Cliente_Fuente" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">FIXED</Value>
+    </Setting>
+    <Setting Name="PatchXml" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Comprobantes EFIXED\Repositorio de Comprobantes\</Value>
+    </Setting>
+    <Setting Name="Ocon_Efirm" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=localhost;Initial Catalog=DBERP;User ID=sa;Password=Sysadm753</Value>
+    </Setting>
+    <Setting Name="Conexioncliente" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=localhost;Initial Catalog=DBERP;User ID=sa;Password=Sysadm753</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

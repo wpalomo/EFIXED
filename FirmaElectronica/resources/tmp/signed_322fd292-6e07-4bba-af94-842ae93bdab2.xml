@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>EXPOGUAYAQUIL</razonSocial>
+    <ruc>0992496797001</ruc>
+    <claveAcceso>1905201801099249679700120010220000117251234567811</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>022</ptoEmi>
+    <secuencial>000011725</secuencial>
+    <dirMatriz>AV. DE LAS AMERICAS 406</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>19/05/2018</fechaEmision>
+    <dirEstablecimiento>AV. DE LAS AMERICAS 406</dirEstablecimiento>
+    <contribuyenteEspecial>577</contribuyenteEspecial>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>07</tipoIdentificacionComprador>
+    <razonSocialComprador>CONSUMIDOR FINAL</razonSocialComprador>
+    <identificacionComprador>9999999999999</identificacionComprador>
+    <totalSinImpuestos>2.68</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <descuentoAdicional>0</descuentoAdicional>
+        <baseImponible>2.68</baseImponible>
+        <valor>0.32</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0</propina>
+    <importeTotal>3.00</importeTotal>
+    <moneda>Dolares</moneda>
+    <pagos>
+      <pago>
+        <formaPago>01</formaPago>
+        <total>3.00</total>
+        <plazo>0</plazo>
+        <unidadTiempo>dias</unidadTiempo>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>0001</codigoPrincipal>
+      <codigoAuxiliar>0001</codigoAuxiliar>
+      <descripcion>Tiempo de parqueo</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>2.68</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>2.68</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12</tarifa>
+          <baseImponible>2.68</baseImponible>
+          <valor>0.32</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature675000">
+<ds:SignedInfo Id="Signature-SignedInfo131734">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></ds:CanonicalizationMethod>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></ds:SignatureMethod>
+<ds:Reference Id="SignedPropertiesID343838" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature675000-SignedProperties994368">
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></ds:DigestMethod>
+<ds:DigestValue>gSVbWdzhpZRn7FZAtIKcpNLcfD8FRYniQtKR88XWKZ0=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1982589">
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></ds:DigestMethod>
+<ds:DigestValue>oAj0ElJ4e9aNNlu9LvsD1K0uFAEAy3j14Ge9MOrN6uk=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-726938" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></ds:Transform>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></ds:DigestMethod>
+<ds:DigestValue>nqY48hrwYrv2sfOBs8+SdIEvNgMgJJ4E2Ai0zeSkw0I=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue194939">
+G6Z+uhKPRCeP6/ILTcWQdGX5ynGfDrKv4x6Lmfl1tZpMVzPZHkDyBsM0WkZPa52I72eDhCJ8khaP
+WbdWWaSjdZ02ctQnxHxuCaCEZ/QhQ8YLD0gH+u8OjN1jNZ3ZsBQo2KOaFgJbd+1X6tLSrDvkGlcq
+5QbJfCXEDkOlNqH2arT/4eWIi2KeAntg0Wo+QfzNkYgyy5zj1b3+Mx0hXU38Y6mV4E49vnXncOjC
++Cvqjzrc7FCL44e1BtJgXRiaPxoaosa3JMm0cNVDSoS1w5bESt/bTkytYx3dCI+ouWimyAwz3Sn5
+1RJlJE8avX+Ae8FoQvFuhffEDODq/xjrs3Vzow==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1982589">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJjzCCB3egAwIBAgIEWH8sYDANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE3MTEwNjE1Mjg1OFoXDTE5MTEwNjE1NTg1
+OFowgbcxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzE7MBEGA1UEBRMKMDAwMDA4ODIyMzAmBgNVBAMTH0pVTlkgSk9IQU5OQSBT
+QUFWRURSQSBST0RSSUdVRVowggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC9HAMxnf8E
+gd0XqgJXLlH2Igi5bxZQ2ZS55ObmIs/mAeoTvqNAHgca48bG21ywtwTH9nim90tqYCR12Fl7DxPT
+0mIbyuZnFe2w2u8hEcx1/m+vDlanILESrntUSC5qL5lrb0wkui/uxnNnTlD6Kmf7S5MH5MCzU6ta
+KsOGmNn50JW4a8MA15os25CJEW4u64Z+Wd/4dtiwm5dVBADRO2LNTw95lR8AiodZqBnz+8Xx4Sb4
+EbcoT+A51E9F0oXU4dPCOhdl3Xle7MzCTg8U4aRq/H53oSPC5g0Pe7M9dwhVED517UYR+9o73mX1
+vnRQ0K4dwXhK7W8QDZKyymM0gykVAgMBAAGjggS1MIIEsTCBkQYIKwYBBQUHAQEEgYQwgYEwPgYI
+KwYBBQUHMAGGMmh0dHA6Ly9vY3NwLmVjaS5iY2UuZWMvZWpiY2EvcHVibGljd2ViL3N0YXR1cy9v
+Y3NwMD8GCCsGAQUFBzABhjNodHRwOi8vb2NzcDEuZWNpLmJjZS5lYy9lamJjYS9wdWJsaWN3ZWIv
+c3RhdHVzL29jc3AwIAYKKwYBBAGCqDsDCgQSExBFWFBPR1VBWUFRVUlMIFNBMB0GCisGAQQBgqg7
+AwsEDxMNMDk5MjQ5Njc5NzAwMTAaBgorBgEEAYKoOwMBBAwTCjEyMDI5Mjg2OTEwHAYKKwYBBAGC
+qDsDAgQOEwxKVU5ZIEpPSEFOTkEwGAYKKwYBBAGCqDsDAwQKEwhTQUFWRURSQTAZBgorBgEEAYKo
+OwMEBAsTCVJPRFJJR1VFWjAZBgorBgEEAYKoOwMFBAsTCUNPTlRBRE9SQTBKBgorBgEEAYKoOwMH
+BDwTOkFWIERFIExBUyBBTUVSSUNBUyA0MDYgRURJRiBBTlRJR1VPIFRFUk1JTkFMIFNJTU9OIEJP
+TElWQVIwGQYKKwYBBAGCqDsDCAQLEwkwNDUwMDA1OTIwGQYKKwYBBAGCqDsDCQQLEwlHdWF5YXF1
+aWwwFwYKKwYBBAGCqDsDDAQJEwdFQ1VBRE9SMBUGCisGAQQBgqg7AzIEBxMFODU5NzAwIAYKKwYB
+BAGCqDsDMwQSExBTT0ZUV0FSRS1BUkNISVZPMCYGA1UdEQQfMB2BG0pTQUFWRURSQUBFWFBPR1VB
+WUFRVUlMLkNPTTCCAd8GA1UdHwSCAdYwggHSMIIBzqCCAcqgggHGhoHVbGRhcDovL2JjZXFsZGFw
+c3VicDEuYmNlLmVjL2NuPUNSTDQ3MCxjbj1BQyUyMEJBTkNPJTIwQ0VOVFJBTCUyMERFTCUyMEVD
+VUFET1IsbD1RVUlUTyxvdT1FTlRJREFEJTIwREUlMjBDRVJUSUZJQ0FDSU9OJTIwREUlMjBJTkZP
+Uk1BQ0lPTi1FQ0lCQ0Usbz1CQU5DTyUyMENFTlRSQUwlMjBERUwlMjBFQ1VBRE9SLGM9RUM/Y2Vy
+dGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlhjRodHRwOi8vd3d3LmVjaS5iY2UuZWMvQ1JML2Vj
+aV9iY2VfZWNfY3JsZmlsZWNvbWIuY3JspIG1MIGyMQswCQYDVQQGEwJFQzEiMCAGA1UEChMZQkFO
+Q08gQ0VOVFJBTCBERUwgRUNVQURPUjE3MDUGA1UECxMuRU5USURBRCBERSBDRVJUSUZJQ0FDSU9O
+IERFIElORk9STUFDSU9OLUVDSUJDRTEOMAwGA1UEBxMFUVVJVE8xJTAjBgNVBAMTHEFDIEJBTkNP
+IENFTlRSQUwgREVMIEVDVUFET1IxDzANBgNVBAMTBkNSTDQ3MDALBgNVHQ8EBAMCBSAwHwYDVR0j
+BBgwFoAUGPnw++YyHJlmOSrKi7JpfUknv84wHQYDVR0OBBYEFFV0KQDTfJF/U9d55R4X7wK1QUyZ
+MAkGA1UdEwQCMAAwGQYJKoZIhvZ9B0EABAwwChsEVjguMQMCBJAwDQYJKoZIhvcNAQELBQADggIB
+AIaSHTxSya3YpkYmqFqqSzHoudQUUMkM/dgThQtGPtgYlIuMJ39tqrCvKWdQagnQP0uGyPh5Tne7
+4Y8ImZSldt4KAZB7SJiKuHURRoVu+SfIX4Ssl9VXcJnmWl2vd7vagfifQEIzEtb1hSoif4csx9jv
+yxKx7yzhNm2iujGXF/QjnIci2UZl/4sx+CpNnD9bmAIpSqkhiChfF06g5oDzPVo9XshSg1fUdALL
+ylbWl/CdP2oW5i6EZkg1h0MW4gQoJBWhUC0fkBq1iusMCMvT6OIjupLm0TpQq3HRSG7734I+MJMi
+1nF8OpZkKGIGl+PwYXzdrjcTUnXRrdRoXpOt648z1SyIRXgbAScai3NZIxl0q4Fu6oteZY8TiJea
+tKvP2GladBkCQTLEoeXN5klEi0u9UCvU5thu1NCRnY1ewYPw+deGQ2hwJ94qlKQ4QK0IeSrIsNMJ
+Rxj8GcNa1PoqSZX32WKtmFOV2wBBiE1rJ0IYzx//sivHx5bYGdfME7m0tuCIWopVaZSvgKSBdklk
+ONWKWe8Rvmb2ZTCY5s89rf1W56Go6KryqkcImDzC6Gyrz8gGU/czbzsq0Mww5Oh0BuujrvorPARE
+N6FY5YGwZQPLW3pcO8Kvak0c5ql910TfeUf+ZXUuMbtWyTRjuODaHSPs7jYGahXkUuoWRUluAW00
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+vRwDMZ3/BIHdF6oCVy5R9iIIuW8WUNmUueTm5iLP5gHqE76jQB4HGuPGxttcsLcEx/Z4pvdLamAk
+ddhZew8T09JiG8rmZxXtsNrvIRHMdf5vrw5WpyCxEq57VEguai+Za29MJLov7sZzZ05Q+ipn+0uT
+B+TAs1OrWirDhpjZ+dCVuGvDANeaLNuQiRFuLuuGflnf+HbYsJuXVQQA0TtizU8PeZUfAIqHWagZ
+8/vF8eEm+BG3KE/gOdRPRdKF1OHTwjoXZd15XuzMwk4PFOGkavx+d6EjwuYND3uzPXcIVRA+de1G
+EfvaO95l9b50UNCuHcF4Su1vEA2SsspjNIMpFQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature675000-Object338858"><etsi:QualifyingProperties Target="#Signature675000"><etsi:SignedProperties Id="Signature675000-SignedProperties994368"><etsi:SignedSignatureProperties><etsi:SigningTime>2018-06-19T14:51:27-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></ds:DigestMethod><ds:DigestValue>88T9L2lmjtfWnDM3nz9MCotbJ119jUcWyYmiBgNT7tw=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1484729440</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-726938"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

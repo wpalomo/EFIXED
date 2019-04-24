@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{352897AF-0E7F-4327-B89D-30BFFB29990E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MailEfirm</RootNamespace>
+    <AssemblyName>MailEfirm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a" />
+    <Reference Include="DevExpress.CodeParser.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.Win.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Persistent.Base.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Reports.v12.1.Designer, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v12.1.UI, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1.Extensions, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1.Extensions, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EAGetMail">
+      <HintPath>..\FirmElect.Recursos\dll\EAGetMail.dll</HintPath>
+    </Reference>
+    <Reference Include="EASendMail45, Version=7.2.0.1, Culture=neutral, PublicKeyToken=88adb80ecd66540b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FirmElect.Recursos\dll\EASendMail45.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\FirmElect.Recursos\dll\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\UC_Botones_Paginas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Botones_Paginas.Designer.cs">
+      <DependentUpon>UC_Botones_Paginas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Uc_Contacto_consul.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Uc_Contacto_consul.Designer.cs">
+      <DependentUpon>Uc_Contacto_consul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_Cuentas_Menu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Cuentas_Menu.Designer.cs">
+      <DependentUpon>UC_Cuentas_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_Cuenta_Mant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Cuenta_Mant.Designer.cs">
+      <DependentUpon>UC_Cuenta_Mant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_Envio_Cbtes_Autorizados_Masivo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Envio_Cbtes_Autorizados_Masivo.Designer.cs">
+      <DependentUpon>UC_Envio_Cbtes_Autorizados_Masivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_Mail_Buzon_Elementos_Enviados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Mail_Buzon_Elementos_Enviados.Designer.cs">
+      <DependentUpon>UC_Mail_Buzon_Elementos_Enviados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_Mail_Buzon_Entrada.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Mail_Buzon_Entrada.Designer.cs">
+      <DependentUpon>UC_Mail_Buzon_Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_Mail_Elementos_Eliminados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Mail_Elementos_Eliminados.Designer.cs">
+      <DependentUpon>UC_Mail_Elementos_Eliminados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_Mail_No_Enviados_x_Errores.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Mail_No_Enviados_x_Errores.Designer.cs">
+      <DependentUpon>UC_Mail_No_Enviados_x_Errores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_Menu_cuentas_mail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Menu_cuentas_mail.Designer.cs">
+      <DependentUpon>UC_Menu_cuentas_mail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_Menu_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Menu_Main.Designer.cs">
+      <DependentUpon>UC_Menu_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_Menu_Redactar_Email.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Menu_Redactar_Email.Designer.cs">
+      <DependentUpon>UC_Menu_Redactar_Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_Contacto_mant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Contacto_mant.Designer.cs">
+      <DependentUpon>UC_Contacto_mant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_Mail_Buzon_Salida.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Mail_Buzon_Salida.Designer.cs">
+      <DependentUpon>UC_Mail_Buzon_Salida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UC_Cuenta_Consulta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UC_Cuenta_Consulta.Designer.cs">
+      <DependentUpon>UC_Cuenta_Consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMensaje_XML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMensaje_XML.Designer.cs">
+      <DependentUpon>frmMensaje_XML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Buzon_Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Buzon_Email.Designer.cs">
+      <DependentUpon>Frm_Buzon_Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Carga_PDF_XML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Carga_PDF_XML.Designer.cs">
+      <DependentUpon>Frm_Carga_PDF_XML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Configuraciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Configuraciones.Designer.cs">
+      <DependentUpon>Frm_Configuraciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Correo_POP_IMAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Correo_POP_IMAP.Designer.cs">
+      <DependentUpon>Frm_Correo_POP_IMAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Cuenta_Configuracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Cuenta_Configuracion.Designer.cs">
+      <DependentUpon>Frm_Cuenta_Configuracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_DisenioRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_DisenioRpt.Designer.cs">
+      <DependentUpon>Frm_DisenioRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Enviar_Cbtes_Auto_Mail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Enviar_Cbtes_Auto_Mail.Designer.cs">
+      <DependentUpon>Frm_Enviar_Cbtes_Auto_Mail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Enviar_y_Recibir_Cuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Enviar_y_Recibir_Cuentas.Designer.cs">
+      <DependentUpon>Frm_Enviar_y_Recibir_Cuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Menu_Cuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Menu_Cuentas.Designer.cs">
+      <DependentUpon>Frm_Menu_Cuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Nueva_Cuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Nueva_Cuenta.Designer.cs">
+      <DependentUpon>Frm_Nueva_Cuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Nuevo_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Nuevo_Usuario.Designer.cs">
+      <DependentUpon>Frm_Nuevo_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Redactar_Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Redactar_Email.Designer.cs">
+      <DependentUpon>Frm_Redactar_Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Test.Designer.cs">
+      <DependentUpon>Frm_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Test_Config_Mail_Envio_Recep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Test_Config_Mail_Envio_Recep.Designer.cs">
+      <DependentUpon>Frm_Test_Config_Mail_Envio_Recep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_usuario_consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_usuario_consulta.Designer.cs">
+      <DependentUpon>Frm_usuario_consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Main_Mail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Main_Mail.Designer.cs">
+      <DependentUpon>Frm_Main_Mail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\UC_Botones_Paginas.resx">
+      <DependentUpon>UC_Botones_Paginas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Uc_Contacto_consul.resx">
+      <DependentUpon>Uc_Contacto_consul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_Cuentas_Menu.resx">
+      <DependentUpon>UC_Cuentas_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_Cuenta_Mant.resx">
+      <DependentUpon>UC_Cuenta_Mant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_Envio_Cbtes_Autorizados_Masivo.resx">
+      <DependentUpon>UC_Envio_Cbtes_Autorizados_Masivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_Mail_Buzon_Elementos_Enviados.resx">
+      <DependentUpon>UC_Mail_Buzon_Elementos_Enviados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_Mail_Buzon_Entrada.resx">
+      <DependentUpon>UC_Mail_Buzon_Entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_Mail_Elementos_Eliminados.resx">
+      <DependentUpon>UC_Mail_Elementos_Eliminados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_Mail_No_Enviados_x_Errores.resx">
+      <DependentUpon>UC_Mail_No_Enviados_x_Errores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_Menu_cuentas_mail.resx">
+      <DependentUpon>UC_Menu_cuentas_mail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_Menu_Main.resx">
+      <DependentUpon>UC_Menu_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_Menu_Redactar_Email.resx">
+      <DependentUpon>UC_Menu_Redactar_Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_Contacto_mant.resx">
+      <DependentUpon>UC_Contacto_mant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_Mail_Buzon_Salida.resx">
+      <DependentUpon>UC_Mail_Buzon_Salida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UC_Cuenta_Consulta.resx">
+      <DependentUpon>UC_Cuenta_Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMensaje_XML.resx">
+      <DependentUpon>frmMensaje_XML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Buzon_Email.resx">
+      <DependentUpon>Frm_Buzon_Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Carga_PDF_XML.resx">
+      <DependentUpon>Frm_Carga_PDF_XML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Configuraciones.resx">
+      <DependentUpon>Frm_Configuraciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Correo_POP_IMAP.resx">
+      <DependentUpon>Frm_Correo_POP_IMAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Cuenta_Configuracion.resx">
+      <DependentUpon>Frm_Cuenta_Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_DisenioRpt.resx">
+      <DependentUpon>Frm_DisenioRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Enviar_Cbtes_Auto_Mail.resx">
+      <DependentUpon>Frm_Enviar_Cbtes_Auto_Mail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Enviar_y_Recibir_Cuentas.resx">
+      <DependentUpon>Frm_Enviar_y_Recibir_Cuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Menu_Cuentas.resx">
+      <DependentUpon>Frm_Menu_Cuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Nueva_Cuenta.resx">
+      <DependentUpon>Frm_Nueva_Cuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Nuevo_Usuario.resx">
+      <DependentUpon>Frm_Nuevo_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Redactar_Email.resx">
+      <DependentUpon>Frm_Redactar_Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Test.resx">
+      <DependentUpon>Frm_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Test_Config_Mail_Envio_Recep.resx">
+      <DependentUpon>Frm_Test_Config_Mail_Envio_Recep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_usuario_consulta.resx">
+      <DependentUpon>Frm_usuario_consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Main_Mail.resx">
+      <DependentUpon>Frm_Main_Mail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Resources\NewMail_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\AttachmentObject_16x16.png" />
+    <Content Include="Resources\BO_Feeds.png" />
+    <Content Include="Resources\BO_Feeds_Large.png" />
+    <Content Include="Resources\BO_Task.png" />
+    <Content Include="Resources\BO_Task_Large.png" />
+    <Content Include="Resources\ByState_32x32.png" />
+    <Content Include="Resources\Card_32x32.png" />
+    <Content Include="Resources\Close_16x16.png" />
+    <Content Include="Resources\Close_32x32.png" />
+    <Content Include="Resources\Code_Central.png" />
+    <Content Include="Resources\Completed_16x16.png" />
+    <Content Include="Resources\Completed_32x32.png" />
+    <None Include="Resources\ConfigCuenta.png" />
+    <Content Include="Resources\Contact_16x16.png" />
+    <Content Include="Resources\Contact_32x32.png" />
+    <Content Include="Resources\Contact_Us.png" />
+    <Content Include="Resources\Custom_Flag.png" />
+    <Content Include="Resources\Deferred_32x32.png" />
+    <Content Include="Resources\Delete_16x16.png" />
+    <Content Include="Resources\Delete_32x32.png" />
+    <Content Include="Resources\Doctor.png" />
+    <Content Include="Resources\EditContact_16x16.png" />
+    <Content Include="Resources\EditContact_32x32.png" />
+    <Content Include="Resources\EditFeed_16x16.png" />
+    <Content Include="Resources\EditFeed_32x32.png" />
+    <Content Include="Resources\EditTask_16x16.png" />
+    <Content Include="Resources\EditTask_32x32.png" />
+    <Content Include="Resources\ExportToCSV_32x32.png" />
+    <Content Include="Resources\ExportToHTML_32x32.png" />
+    <Content Include="Resources\ExportToImage_32x32.png" />
+    <Content Include="Resources\ExportToMHT_32x32.png" />
+    <Content Include="Resources\ExportToPDF_32x32.png" />
+    <Content Include="Resources\ExportToRTF_32x32.png" />
+    <Content Include="Resources\ExportToText_32x32.png" />
+    <Content Include="Resources\ExportToXLSX_32x32.png" />
+    <Content Include="Resources\ExportToXLS_32x32.png" />
+    <Content Include="Resources\Forward.png" />
+    <Content Include="Resources\High16x16.png" />
+    <Content Include="Resources\Important_16x16.png" />
+    <Content Include="Resources\LayoutFlip_16x16.png" />
+    <Content Include="Resources\LayoutFlip_32x32.png" />
+    <Content Include="Resources\LayoutRotate_16x16.png" />
+    <Content Include="Resources\LayoutRotate_32x32.png" />
+    <Content Include="Resources\ListByDate_32x32.png" />
+    <Content Include="Resources\List_32x32.png" />
+    <Content Include="Resources\Low16x16.png" />
+    <Content Include="Resources\Mail_16x16.png" />
+    <Content Include="Resources\Mail_32x32.png" />
+    <Content Include="Resources\MemoStyle.png" />
+    <Content Include="Resources\Miss.png" />
+    <Content Include="Resources\Mr.png" />
+    <Content Include="Resources\Mrs.png" />
+    <Content Include="Resources\Ms.png" />
+    <Content Include="Resources\MultiplePagesLarge.png" />
+    <Content Include="Resources\NavigationBar_16x16.png" />
+    <Content Include="Resources\NavigationBar_32x32.png" />
+    <Content Include="Resources\NewContact_16x16.png" />
+    <Content Include="Resources\NewContact_32x32.png" />
+    <Content Include="Resources\NewFeed_16x16.png" />
+    <Content Include="Resources\NewFeed_32x32.png" />
+    <Content Include="Resources\NewMail_32x32.png" />
+    <Content Include="Resources\NewTask_16x16.png" />
+    <Content Include="Resources\NewTask_32x32.png" />
+    <Content Include="Resources\NextWeek_Flag.png" />
+    <Content Include="Resources\NoDate_Flag.png" />
+    <Content Include="Resources\normal.png" />
+    <Content Include="Resources\Online_Help.png" />
+    <Content Include="Resources\OpenClendar_64x64.png" />
+    <Content Include="Resources\Overdue_32x32.png" />
+    <Content Include="Resources\Owner.png" />
+    <Content Include="Resources\PageMarginsModerate.png" />
+    <Content Include="Resources\PageMarginsNarrow.png" />
+    <Content Include="Resources\PageMarginsNormal.png" />
+    <Content Include="Resources\PageMarginsWide.png" />
+    <Content Include="Resources\PageOrientationLandscape.png" />
+    <Content Include="Resources\PageOrientationPortrait.png" />
+    <Content Include="Resources\PaperKind_A3.png" />
+    <Content Include="Resources\PaperKind_A4.png" />
+    <Content Include="Resources\PaperKind_A5.png" />
+    <Content Include="Resources\PaperKind_A6.png" />
+    <Content Include="Resources\PaperKind_Executive.png" />
+    <Content Include="Resources\PaperKind_Legal.png" />
+    <Content Include="Resources\PaperKind_Letter.png" />
+    <Content Include="Resources\PaperKind_Tabloid.png" />
+    <Content Include="Resources\PrintDirectLarge.png" />
+    <Content Include="Resources\Prioritized_32x32.png" />
+    <Content Include="Resources\Priority_16x16.png" />
+    <Content Include="Resources\Professor.png" />
+    <Content Include="Resources\reading.png" />
+    <Content Include="Resources\Refresh_16x16.png" />
+    <Content Include="Resources\Refresh_32x32.png" />
+    <Content Include="Resources\Reply.png" />
+    <Content Include="Resources\ReplyAll.png" />
+    <Content Include="Resources\ResetToDefault_16x16.png" />
+    <Content Include="Resources\SaveAll_32x32.png" />
+    <Content Include="Resources\Save_16x16.png" />
+    <Content Include="Resources\Save_32x32.png" />
+    <Content Include="Resources\Search.png" />
+    <None Include="Resources\sendE.png" />
+    <None Include="Resources\Sen.png" />
+    <Content Include="Resources\SortAsc_32x32.png" />
+    <Content Include="Resources\SplashScreen.png" />
+    <Content Include="Resources\TableStyle.png" />
+    <Content Include="Resources\ThisWeek_Flag.png" />
+    <Content Include="Resources\Today_16x16.png" />
+    <Content Include="Resources\Today_32x32.png" />
+    <Content Include="Resources\Today_Flag.png" />
+    <Content Include="Resources\ToDoList_32x32.png" />
+    <Content Include="Resources\Tomorrow_Flag.png" />
+    <Content Include="Resources\Unknown-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FirmElect.Bus\FirmElect.Bus.csproj">
+      <Project>{ae0d2ebe-1fa9-451a-8c8e-6b1b72094bb1}</Project>
+      <Name>FirmElect.Bus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FirmElect.Info\FirmElect.Info.csproj">
+      <Project>{a739beee-cd06-4647-84a4-8e76bed4a54a}</Project>
+      <Name>FirmElect.Info</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FirmElect.Recursos\FirmElect.Recursos.csproj">
+      <Project>{5ae804f3-3ee4-4fc9-be51-6e92956f6084}</Project>
+      <Name>FirmElect.Recursos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FirmElect.Reports\FirmElect.Reports.csproj">
+      <Project>{6892bbcc-3807-4c3f-b815-b279ff7cb172}</Project>
+      <Name>FirmElect.Reports</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

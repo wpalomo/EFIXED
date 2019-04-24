@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/FirmElect.Info" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/FirmElect.Info" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOftb_Catalogo_Info">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tb_Catalogo_Info" nillable="true" type="tns:tb_Catalogo_Info" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftb_Catalogo_Info" nillable="true" type="tns:ArrayOftb_Catalogo_Info" />
+  <xs:complexType name="tb_Catalogo_Info">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdCatalogo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdTIpoCatalogo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tb_Catalogo_Info" nillable="true" type="tns:tb_Catalogo_Info" />
+  <xs:complexType name="ArrayOftb_Comprobante_Info">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tb_Comprobante_Info" nillable="true" type="tns:tb_Comprobante_Info" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftb_Comprobante_Info" nillable="true" type="tns:ArrayOftb_Comprobante_Info" />
+  <xs:complexType name="tb_Comprobante_Info">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cedula_Ruc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveContingencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstadoDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaAutorizacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha_Emi_Fact" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha_transaccion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdComprobante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdEmpresa" type="xs:int" />
+      <xs:element minOccurs="0" name="IdError_Sri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdEstadoProceso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdEstado_cbte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdTipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nom_TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre_file" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero_Autorizacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RespuestaSRI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RutaArchivo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total" type="xs:double" />
+      <xs:element minOccurs="0" name="s_XML" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tb_Comprobante_Info" nillable="true" type="tns:tb_Comprobante_Info" />
+</xs:schema>

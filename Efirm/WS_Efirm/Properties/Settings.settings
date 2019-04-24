@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WS_Efirm.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="P_ESTADO_CARGA_EFIRM" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SERVER</Value>
+    </Setting>
+    <Setting Name="MOSTRAR_CONSOLA" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">N</Value>
+    </Setting>
+    <Setting Name="AUTORIZADO_ENVIO_CORREO" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">S</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

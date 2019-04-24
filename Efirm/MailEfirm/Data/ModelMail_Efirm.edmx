@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DBFacturacion_ElectronicaModel_Mail_Efirm.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="DBFacturacion_ElectronicaModel_Mail_EfirmStoreContainer">
+          <EntitySet Name="mail_Mensaje" EntityType="DBFacturacion_ElectronicaModel_Mail_Efirm.Store.mail_Mensaje" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mail_Mensaje_Archi_Adjunto" EntityType="DBFacturacion_ElectronicaModel_Mail_Efirm.Store.mail_Mensaje_Archi_Adjunto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mail_Mensaje_Tipo" EntityType="DBFacturacion_ElectronicaModel_Mail_Efirm.Store.mail_Mensaje_Tipo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tb_Contribuyente" EntityType="DBFacturacion_ElectronicaModel_Mail_Efirm.Store.tb_Contribuyente" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tb_Empresa" EntityType="DBFacturacion_ElectronicaModel_Mail_Efirm.Store.tb_Empresa" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_mail_Mensaje_Archi_Adjunto_mail_Mensaje" Association="DBFacturacion_ElectronicaModel_Mail_Efirm.Store.FK_mail_Mensaje_Archi_Adjunto_mail_Mensaje">
+            <End Role="mail_Mensaje" EntitySet="mail_Mensaje" />
+            <End Role="mail_Mensaje_Archi_Adjunto" EntitySet="mail_Mensaje_Archi_Adjunto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mail_Mensaje_mail_Mensaje_Tipo" Association="DBFacturacion_ElectronicaModel_Mail_Efirm.Store.FK_mail_Mensaje_mail_Mensaje_Tipo">
+            <End Role="mail_Mensaje_Tipo" EntitySet="mail_Mensaje_Tipo" />
+            <End Role="mail_Mensaje" EntitySet="mail_Mensaje" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mail_Mensaje_tb_Contribuyente" Association="DBFacturacion_ElectronicaModel_Mail_Efirm.Store.FK_mail_Mensaje_tb_Contribuyente">
+            <End Role="tb_Contribuyente" EntitySet="tb_Contribuyente" />
+            <End Role="mail_Mensaje" EntitySet="mail_Mensaje" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="mail_Mensaje">
+          <Key>
+            <PropertyRef Name="IdMensaje" />
+          </Key>
+          <Property Name="IdMensaje" Type="numeric" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="Para" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Asunto" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Asunto_texto_mostrado" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Tiene_Adjunto" Type="int" Nullable="false" />
+          <Property Name="Prioridad" Type="int" Nullable="false" />
+          <Property Name="Leido" Type="int" Nullable="false" />
+          <Property Name="Respondido" Type="bit" Nullable="false" />
+          <Property Name="No_Leido" Type="bit" Nullable="false" />
+          <Property Name="Texto_mensaje" Type="varchar(max)" Nullable="false" />
+          <Property Name="IdTipo_Mensaje" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="Carpeta_Mensaje" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Eliminado" Type="bit" Nullable="false" />
+          <Property Name="IdContribuyente" Type="numeric" />
+        </EntityType>
+        <EntityType Name="mail_Mensaje_Archi_Adjunto">
+          <Key>
+            <PropertyRef Name="IdMensaje" />
+            <PropertyRef Name="Secuencia" />
+          </Key>
+          <Property Name="IdMensaje" Type="numeric" Nullable="false" />
+          <Property Name="Secuencia" Type="int" Nullable="false" />
+          <Property Name="Archivo_adjunto" Type="varbinary(max)" Nullable="false" />
+          <Property Name="descripcion_archi" Type="varchar" Nullable="false" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="mail_Mensaje_Tipo">
+          <Key>
+            <PropertyRef Name="IdTipo_Mensaje" />
+          </Key>
+          <Property Name="IdTipo_Mensaje" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_Contribuyente">
+          <Key>
+            <PropertyRef Name="IdContribuyente" />
+          </Key>
+          <Property Name="IdContribuyente" Type="numeric" Nullable="false" />
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="cedulaRuc_contri" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Nom_Contribuyente" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="Mail" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Mail_secundario" Type="varchar" MaxLength="50" />
+          <Property Name="EsCliente" Type="bit" Nullable="false" />
+          <Property Name="EsProveedor" Type="bit" Nullable="false" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="Fecha_transaccion" Type="datetime" />
+          <Property Name="Fecha_Registro_web" Type="datetime" />
+          <Property Name="Fecha_Actualizacion_datos" Type="datetime" />
+          <Property Name="Registrado_web" Type="bit" Nullable="false" />
+          <Property Name="Observacion" Type="varchar(max)" Nullable="false" />
+          <Property Name="TipoContacto" Type="varchar" MaxLength="10" />
+          <Property Name="Foto" Type="image" />
+          <Property Name="Direccion" Type="varchar" MaxLength="200" />
+          <Property Name="Telefono" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_Empresa">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="RazonSocial" Type="varchar" Nullable="false" MaxLength="300" />
+          <Property Name="NombreComercial" Type="varchar" Nullable="false" MaxLength="300" />
+          <Property Name="RUC" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="DirMatriz" Type="varchar" Nullable="false" MaxLength="300" />
+          <Property Name="ContribuyenteEspecial" Type="varchar" Nullable="false" MaxLength="5" />
+          <Property Name="ObligadoAllevarConta" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="NombreCertificado" Type="varchar" MaxLength="200" />
+          <Property Name="Clave_Certificado" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="FechaValidez" Type="datetime" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="logo" Type="image" />
+          <Property Name="IdAmbiente" Type="int" Nullable="false" />
+          <Property Name="TipoEmision" Type="int" Nullable="false" />
+          <Property Name="Alias" Type="varchar" MaxLength="100" />
+          <Property Name="IdToquenAFirmar" Type="varchar" MaxLength="10" />
+          <Property Name="cod_Ambiente" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="cod_TipoEmision" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="url" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_mail_Mensaje_Archi_Adjunto_mail_Mensaje">
+          <End Role="mail_Mensaje" Type="DBFacturacion_ElectronicaModel_Mail_Efirm.Store.mail_Mensaje" Multiplicity="1" />
+          <End Role="mail_Mensaje_Archi_Adjunto" Type="DBFacturacion_ElectronicaModel_Mail_Efirm.Store.mail_Mensaje_Archi_Adjunto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mail_Mensaje">
+              <PropertyRef Name="IdMensaje" />
+            </Principal>
+            <Dependent Role="mail_Mensaje_Archi_Adjunto">
+              <PropertyRef Name="IdMensaje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mail_Mensaje_mail_Mensaje_Tipo">
+          <End Role="mail_Mensaje_Tipo" Type="DBFacturacion_ElectronicaModel_Mail_Efirm.Store.mail_Mensaje_Tipo" Multiplicity="1" />
+          <End Role="mail_Mensaje" Type="DBFacturacion_ElectronicaModel_Mail_Efirm.Store.mail_Mensaje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mail_Mensaje_Tipo">
+              <PropertyRef Name="IdTipo_Mensaje" />
+            </Principal>
+            <Dependent Role="mail_Mensaje">
+              <PropertyRef Name="IdTipo_Mensaje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mail_Mensaje_tb_Contribuyente">
+          <End Role="tb_Contribuyente" Type="DBFacturacion_ElectronicaModel_Mail_Efirm.Store.tb_Contribuyente" Multiplicity="0..1" />
+          <End Role="mail_Mensaje" Type="DBFacturacion_ElectronicaModel_Mail_Efirm.Store.mail_Mensaje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_Contribuyente">
+              <PropertyRef Name="IdContribuyente" />
+            </Principal>
+            <Dependent Role="mail_Mensaje">
+              <PropertyRef Name="IdContribuyente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBFacturacion_ElectronicaModel_Mail_Efirm" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities_Mail_Efirm" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="mail_Mensaje_Archi_Adjunto" EntityType="DBFacturacion_ElectronicaModel_Mail_Efirm.mail_Mensaje_Archi_Adjunto" />
+          <EntitySet Name="mail_Mensaje_Tipo" EntityType="DBFacturacion_ElectronicaModel_Mail_Efirm.mail_Mensaje_Tipo" />
+          <EntitySet Name="mail_Mensaje" EntityType="DBFacturacion_ElectronicaModel_Mail_Efirm.mail_Mensaje" />
+          <EntitySet Name="tb_Contribuyente" EntityType="DBFacturacion_ElectronicaModel_Mail_Efirm.tb_Contribuyente" />
+          <AssociationSet Name="FK_mail_Mensaje_Archi_Adjunto_mail_Mensaje" Association="DBFacturacion_ElectronicaModel_Mail_Efirm.FK_mail_Mensaje_Archi_Adjunto_mail_Mensaje">
+            <End Role="mail_Mensaje" EntitySet="mail_Mensaje" />
+            <End Role="mail_Mensaje_Archi_Adjunto" EntitySet="mail_Mensaje_Archi_Adjunto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mail_Mensaje_mail_Mensaje_Tipo" Association="DBFacturacion_ElectronicaModel_Mail_Efirm.FK_mail_Mensaje_mail_Mensaje_Tipo">
+            <End Role="mail_Mensaje_Tipo" EntitySet="mail_Mensaje_Tipo" />
+            <End Role="mail_Mensaje" EntitySet="mail_Mensaje" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mail_Mensaje_tb_Contribuyente" Association="DBFacturacion_ElectronicaModel_Mail_Efirm.FK_mail_Mensaje_tb_Contribuyente">
+            <End Role="tb_Contribuyente" EntitySet="tb_Contribuyente" />
+            <End Role="mail_Mensaje" EntitySet="mail_Mensaje" />
+          </AssociationSet>
+          <EntitySet Name="tb_Empresa" EntityType="DBFacturacion_ElectronicaModel_Mail_Efirm.tb_Empresa" />
+          </EntityContainer>
+        <EntityType Name="mail_Mensaje_Archi_Adjunto">
+          <Key>
+            <PropertyRef Name="IdMensaje" />
+            <PropertyRef Name="Secuencia" />
+          </Key>
+          <Property Name="IdMensaje" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="Secuencia" Type="Int32" Nullable="false" />
+          <Property Name="Archivo_adjunto" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="descripcion_archi" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mail_Mensaje" Relationship="DBFacturacion_ElectronicaModel_Mail_Efirm.FK_mail_Mensaje_Archi_Adjunto_mail_Mensaje" FromRole="mail_Mensaje_Archi_Adjunto" ToRole="mail_Mensaje" />
+        </EntityType>
+        <EntityType Name="mail_Mensaje_Tipo">
+          <Key>
+            <PropertyRef Name="IdTipo_Mensaje" />
+          </Key>
+          <Property Name="IdTipo_Mensaje" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mail_Mensaje" Relationship="DBFacturacion_ElectronicaModel_Mail_Efirm.FK_mail_Mensaje_mail_Mensaje_Tipo" FromRole="mail_Mensaje_Tipo" ToRole="mail_Mensaje" />
+        </EntityType>
+        <EntityType Name="mail_Mensaje">
+          <Key>
+            <PropertyRef Name="IdMensaje" />
+          </Key>
+          <Property Type="Decimal" Name="IdMensaje" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
+          <Property Type="String" Name="Para" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Asunto" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Asunto_texto_mostrado" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Tiene_Adjunto" Nullable="false" />
+          <Property Type="Int32" Name="Prioridad" Nullable="false" />
+          <Property Type="Int32" Name="Leido" Nullable="false" />
+          <Property Type="Boolean" Name="Respondido" Nullable="false" />
+          <Property Type="Boolean" Name="No_Leido" Nullable="false" />
+          <Property Type="String" Name="Texto_mensaje" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IdTipo_Mensaje" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Carpeta_Mensaje" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Eliminado" Nullable="false" />
+          <Property Type="Decimal" Name="IdContribuyente" Precision="18" Scale="0" />
+          <NavigationProperty Name="mail_Mensaje_Archi_Adjunto" Relationship="DBFacturacion_ElectronicaModel_Mail_Efirm.FK_mail_Mensaje_Archi_Adjunto_mail_Mensaje" FromRole="mail_Mensaje" ToRole="mail_Mensaje_Archi_Adjunto" />
+          <NavigationProperty Name="mail_Mensaje_Tipo" Relationship="DBFacturacion_ElectronicaModel_Mail_Efirm.FK_mail_Mensaje_mail_Mensaje_Tipo" FromRole="mail_Mensaje" ToRole="mail_Mensaje_Tipo" />
+          <NavigationProperty Name="tb_Contribuyente" Relationship="DBFacturacion_ElectronicaModel_Mail_Efirm.FK_mail_Mensaje_tb_Contribuyente" FromRole="mail_Mensaje" ToRole="tb_Contribuyente" />
+        </EntityType>
+        <EntityType Name="tb_Contribuyente">
+          <Key>
+            <PropertyRef Name="IdContribuyente" />
+          </Key>
+          <Property Type="Decimal" Name="IdContribuyente" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+          <Property Type="String" Name="cedulaRuc_contri" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Nom_Contribuyente" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Mail" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Mail_secundario" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="EsCliente" Nullable="false" />
+          <Property Type="Boolean" Name="EsProveedor" Nullable="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Estado" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha_transaccion" Precision="3" />
+          <Property Type="DateTime" Name="Fecha_Registro_web" Precision="3" />
+          <Property Type="DateTime" Name="Fecha_Actualizacion_datos" Precision="3" />
+          <Property Type="Boolean" Name="Registrado_web" Nullable="false" />
+          <Property Type="String" Name="Observacion" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TipoContacto" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="Foto" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="Direccion" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Telefono" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="mail_Mensaje" Relationship="DBFacturacion_ElectronicaModel_Mail_Efirm.FK_mail_Mensaje_tb_Contribuyente" FromRole="tb_Contribuyente" ToRole="mail_Mensaje" />
+        </EntityType>
+        <Association Name="FK_mail_Mensaje_Archi_Adjunto_mail_Mensaje">
+          <End Type="DBFacturacion_ElectronicaModel_Mail_Efirm.mail_Mensaje" Role="mail_Mensaje" Multiplicity="1" />
+          <End Type="DBFacturacion_ElectronicaModel_Mail_Efirm.mail_Mensaje_Archi_Adjunto" Role="mail_Mensaje_Archi_Adjunto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mail_Mensaje">
+              <PropertyRef Name="IdMensaje" />
+            </Principal>
+            <Dependent Role="mail_Mensaje_Archi_Adjunto">
+              <PropertyRef Name="IdMensaje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mail_Mensaje_mail_Mensaje_Tipo">
+          <End Type="DBFacturacion_ElectronicaModel_Mail_Efirm.mail_Mensaje_Tipo" Role="mail_Mensaje_Tipo" Multiplicity="1" />
+          <End Type="DBFacturacion_ElectronicaModel_Mail_Efirm.mail_Mensaje" Role="mail_Mensaje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mail_Mensaje_Tipo">
+              <PropertyRef Name="IdTipo_Mensaje" />
+            </Principal>
+            <Dependent Role="mail_Mensaje">
+              <PropertyRef Name="IdTipo_Mensaje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mail_Mensaje_tb_Contribuyente">
+          <End Type="DBFacturacion_ElectronicaModel_Mail_Efirm.tb_Contribuyente" Role="tb_Contribuyente" Multiplicity="0..1" />
+          <End Type="DBFacturacion_ElectronicaModel_Mail_Efirm.mail_Mensaje" Role="mail_Mensaje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_Contribuyente">
+              <PropertyRef Name="IdContribuyente" />
+            </Principal>
+            <Dependent Role="mail_Mensaje">
+              <PropertyRef Name="IdContribuyente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tb_Empresa">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+          </Key>
+          <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+          <Property Type="String" Name="RazonSocial" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NombreComercial" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RUC" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DirMatriz" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ContribuyenteEspecial" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ObligadoAllevarConta" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NombreCertificado" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Clave_Certificado" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaValidez" Precision="3" />
+          <Property Type="Boolean" Name="Estado" Nullable="false" />
+          <Property Type="Binary" Name="logo" MaxLength="Max" FixedLength="false" />
+          <Property Type="Int32" Name="IdAmbiente" Nullable="false" />
+          <Property Type="Int32" Name="TipoEmision" Nullable="false" />
+          <Property Type="String" Name="Alias" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IdToquenAFirmar" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cod_Ambiente" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cod_TipoEmision" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="url" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBFacturacion_ElectronicaModel_Mail_EfirmStoreContainer" CdmEntityContainer="Entities_Mail_Efirm">
+          <EntitySetMapping Name="mail_Mensaje_Archi_Adjunto">
+            <EntityTypeMapping TypeName="DBFacturacion_ElectronicaModel_Mail_Efirm.mail_Mensaje_Archi_Adjunto">
+              <MappingFragment StoreEntitySet="mail_Mensaje_Archi_Adjunto">
+                <ScalarProperty Name="IdMensaje" ColumnName="IdMensaje" />
+                <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+                <ScalarProperty Name="Archivo_adjunto" ColumnName="Archivo_adjunto" />
+                <ScalarProperty Name="descripcion_archi" ColumnName="descripcion_archi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mail_Mensaje_Tipo">
+            <EntityTypeMapping TypeName="DBFacturacion_ElectronicaModel_Mail_Efirm.mail_Mensaje_Tipo">
+              <MappingFragment StoreEntitySet="mail_Mensaje_Tipo">
+                <ScalarProperty Name="IdTipo_Mensaje" ColumnName="IdTipo_Mensaje" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mail_Mensaje">
+            <EntityTypeMapping TypeName="DBFacturacion_ElectronicaModel_Mail_Efirm.mail_Mensaje">
+              <MappingFragment StoreEntitySet="mail_Mensaje">
+                <ScalarProperty Name="IdContribuyente" ColumnName="IdContribuyente" />
+                <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+                <ScalarProperty Name="Carpeta_Mensaje" ColumnName="Carpeta_Mensaje" />
+                <ScalarProperty Name="IdTipo_Mensaje" ColumnName="IdTipo_Mensaje" />
+                <ScalarProperty Name="Texto_mensaje" ColumnName="Texto_mensaje" />
+                <ScalarProperty Name="No_Leido" ColumnName="No_Leido" />
+                <ScalarProperty Name="Respondido" ColumnName="Respondido" />
+                <ScalarProperty Name="Leido" ColumnName="Leido" />
+                <ScalarProperty Name="Prioridad" ColumnName="Prioridad" />
+                <ScalarProperty Name="Tiene_Adjunto" ColumnName="Tiene_Adjunto" />
+                <ScalarProperty Name="Asunto_texto_mostrado" ColumnName="Asunto_texto_mostrado" />
+                <ScalarProperty Name="Asunto" ColumnName="Asunto" />
+                <ScalarProperty Name="Para" ColumnName="Para" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="IdMensaje" ColumnName="IdMensaje" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Contribuyente">
+            <EntityTypeMapping TypeName="DBFacturacion_ElectronicaModel_Mail_Efirm.tb_Contribuyente">
+              <MappingFragment StoreEntitySet="tb_Contribuyente">
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="TipoContacto" ColumnName="TipoContacto" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="Registrado_web" ColumnName="Registrado_web" />
+                <ScalarProperty Name="Fecha_Actualizacion_datos" ColumnName="Fecha_Actualizacion_datos" />
+                <ScalarProperty Name="Fecha_Registro_web" ColumnName="Fecha_Registro_web" />
+                <ScalarProperty Name="Fecha_transaccion" ColumnName="Fecha_transaccion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="EsProveedor" ColumnName="EsProveedor" />
+                <ScalarProperty Name="EsCliente" ColumnName="EsCliente" />
+                <ScalarProperty Name="Mail_secundario" ColumnName="Mail_secundario" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Nom_Contribuyente" ColumnName="Nom_Contribuyente" />
+                <ScalarProperty Name="cedulaRuc_contri" ColumnName="cedulaRuc_contri" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdContribuyente" ColumnName="IdContribuyente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Empresa">
+            <EntityTypeMapping TypeName="DBFacturacion_ElectronicaModel_Mail_Efirm.tb_Empresa">
+              <MappingFragment StoreEntitySet="tb_Empresa">
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="cod_TipoEmision" ColumnName="cod_TipoEmision" />
+                <ScalarProperty Name="cod_Ambiente" ColumnName="cod_Ambiente" />
+                <ScalarProperty Name="IdToquenAFirmar" ColumnName="IdToquenAFirmar" />
+                <ScalarProperty Name="Alias" ColumnName="Alias" />
+                <ScalarProperty Name="TipoEmision" ColumnName="TipoEmision" />
+                <ScalarProperty Name="IdAmbiente" ColumnName="IdAmbiente" />
+                <ScalarProperty Name="logo" ColumnName="logo" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaValidez" ColumnName="FechaValidez" />
+                <ScalarProperty Name="Clave_Certificado" ColumnName="Clave_Certificado" />
+                <ScalarProperty Name="NombreCertificado" ColumnName="NombreCertificado" />
+                <ScalarProperty Name="ObligadoAllevarConta" ColumnName="ObligadoAllevarConta" />
+                <ScalarProperty Name="ContribuyenteEspecial" ColumnName="ContribuyenteEspecial" />
+                <ScalarProperty Name="DirMatriz" ColumnName="DirMatriz" />
+                <ScalarProperty Name="RUC" ColumnName="RUC" />
+                <ScalarProperty Name="NombreComercial" ColumnName="NombreComercial" />
+                <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

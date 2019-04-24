@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DBFacturacion_ElectronicaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="DBFacturacion_ElectronicaModelStoreContainer">
+          <EntitySet Name="tb_Cliente" EntityType="DBFacturacion_ElectronicaModel.Store.tb_Cliente" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tb_Comprobante" EntityType="DBFacturacion_ElectronicaModel.Store.tb_Comprobante" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tb_Empresa" EntityType="DBFacturacion_ElectronicaModel.Store.tb_Empresa" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tb_sis_Log_Error_Vzen" EntityType="DBFacturacion_ElectronicaModel.Store.tb_sis_Log_Error_Vzen" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_tb_Comprobante_tb_Empresa" Association="DBFacturacion_ElectronicaModel.Store.FK_tb_Comprobante_tb_Empresa">
+            <End Role="tb_Empresa" EntitySet="tb_Empresa" />
+            <End Role="tb_Comprobante" EntitySet="tb_Comprobante" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tb_Cliente">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdCliente" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="IdCliente" Type="decimal" Nullable="false" />
+          <Property Name="Razon_Social" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Apellido" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Cedula_RUC" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="Direccion" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Telefono" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Correo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="EsEmpresa" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_Comprobante">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdComprobante" />
+            <PropertyRef Name="IdTipoDocumento" />
+            <PropertyRef Name="IdEstado_cbte" />
+            <PropertyRef Name="secuencial" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="IdComprobante" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="IdTipoDocumento" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="IdEstado_cbte" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="secuencial" Type="int" Nullable="false" />
+          <Property Name="Cedula_Ruc" Type="varchar" MaxLength="20" />
+          <Property Name="Numero_Autorizacion" Type="varchar" MaxLength="200" />
+          <Property Name="s_XML" Type="varchar(max)" />
+          <Property Name="s_XML_Firmado" Type="varchar(max)" />
+          <Property Name="XML_file" Type="xml" />
+          <Property Name="Fecha_Emi_Fact" Type="datetime" />
+          <Property Name="Fecha_transaccion" Type="datetime" />
+          <Property Name="FechaAutorizacion" Type="datetime" />
+          <Property Name="IdEstadoDeEnvio" Type="varchar" MaxLength="10" />
+          <Property Name="ClaveContingencia" Type="varchar" MaxLength="50" />
+          <Property Name="RutaArchivo" Type="varchar(max)" />
+          <Property Name="EstadoDoc" Type="varchar" MaxLength="50" />
+          <Property Name="Error" Type="varchar(max)" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="IdError_Sri" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="tb_Empresa">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="RazonSocial" Type="varchar" Nullable="false" MaxLength="300" />
+          <Property Name="NombreComercial" Type="varchar" Nullable="false" MaxLength="300" />
+          <Property Name="RUC" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="DirMatriz" Type="varchar" Nullable="false" MaxLength="300" />
+          <Property Name="ContribuyenteEspecial" Type="varchar" Nullable="false" MaxLength="5" />
+          <Property Name="ObligadoAllevarConta" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="NombreCertificado" Type="varchar" MaxLength="200" />
+          <Property Name="Clave_Certificado" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="FechaValidez" Type="datetime" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_sis_Log_Error_Vzen">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Fecha_Trans" Type="datetime" />
+          <Property Name="Detalle" Type="nvarchar(max)" />
+          <Property Name="Tipo" Type="nvarchar(max)" />
+          <Property Name="Clase" Type="nvarchar(max)" />
+          <Property Name="Pantalla" Type="nvarchar(max)" />
+          <Property Name="Asamble" Type="nvarchar(max)" />
+          <Property Name="Usuario" Type="varchar" MaxLength="50" />
+          <Property Name="Ip" Type="varchar" MaxLength="50" />
+          <Property Name="PC" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_tb_Comprobante_tb_Empresa">
+          <End Role="tb_Empresa" Type="DBFacturacion_ElectronicaModel.Store.tb_Empresa" Multiplicity="1" />
+          <End Role="tb_Comprobante" Type="DBFacturacion_ElectronicaModel.Store.tb_Comprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_Empresa">
+              <PropertyRef Name="IdEmpresa" />
+            </Principal>
+            <Dependent Role="tb_Comprobante">
+              <PropertyRef Name="IdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBFacturacion_ElectronicaModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EntitiesFactElectronica" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="tb_Cliente" EntityType="DBFacturacion_ElectronicaModel.tb_Cliente" />
+          <EntitySet Name="tb_Comprobante" EntityType="DBFacturacion_ElectronicaModel.tb_Comprobante" />
+          <EntitySet Name="tb_Empresa" EntityType="DBFacturacion_ElectronicaModel.tb_Empresa" />
+          <EntitySet Name="tb_sis_Log_Error_Vzen" EntityType="DBFacturacion_ElectronicaModel.tb_sis_Log_Error_Vzen" />
+          <AssociationSet Name="FK_tb_Comprobante_tb_Empresa" Association="DBFacturacion_ElectronicaModel.FK_tb_Comprobante_tb_Empresa">
+            <End Role="tb_Empresa" EntitySet="tb_Empresa" />
+            <End Role="tb_Comprobante" EntitySet="tb_Comprobante" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="tb_Cliente">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdCliente" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="IdCliente" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="Razon_Social" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Apellido" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Cedula_RUC" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+          <Property Name="Direccion" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Telefono" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Correo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="EsEmpresa" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_Comprobante">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdComprobante" />
+            <PropertyRef Name="IdTipoDocumento" />
+            <PropertyRef Name="IdEstado_cbte" />
+            <PropertyRef Name="secuencial" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="IdComprobante" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IdTipoDocumento" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="IdEstado_cbte" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="secuencial" Type="Int32" Nullable="false" />
+          <Property Name="Cedula_Ruc" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Numero_Autorizacion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="s_XML" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="s_XML_Firmado" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="XML_file" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Fecha_Emi_Fact" Type="DateTime" Precision="3" />
+          <Property Name="Fecha_transaccion" Type="DateTime" Precision="3" />
+          <Property Name="FechaAutorizacion" Type="DateTime" Precision="3" />
+          <Property Name="IdEstadoDeEnvio" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ClaveContingencia" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="RutaArchivo" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="EstadoDoc" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Error" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="IdError_Sri" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tb_Empresa" Relationship="DBFacturacion_ElectronicaModel.FK_tb_Comprobante_tb_Empresa" FromRole="tb_Comprobante" ToRole="tb_Empresa" />
+          </EntityType>
+        <EntityType Name="tb_Empresa">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="RazonSocial" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="NombreComercial" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="RUC" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+          <Property Name="DirMatriz" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="ContribuyenteEspecial" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="ObligadoAllevarConta" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="NombreCertificado" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Clave_Certificado" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="FechaValidez" Type="DateTime" Precision="3" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tb_Comprobante" Relationship="DBFacturacion_ElectronicaModel.FK_tb_Comprobante_tb_Empresa" FromRole="tb_Empresa" ToRole="tb_Comprobante" />
+        </EntityType>
+        <EntityType Name="tb_sis_Log_Error_Vzen">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Decimal" Nullable="false" Precision="18" Scale="0" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Fecha_Trans" Type="DateTime" Precision="3" />
+          <Property Name="Detalle" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Tipo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Clase" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Pantalla" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Asamble" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Usuario" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Ip" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_tb_Comprobante_tb_Empresa">
+          <End Role="tb_Empresa" Type="DBFacturacion_ElectronicaModel.tb_Empresa" Multiplicity="1" />
+          <End Role="tb_Comprobante" Type="DBFacturacion_ElectronicaModel.tb_Comprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_Empresa">
+              <PropertyRef Name="IdEmpresa" />
+            </Principal>
+            <Dependent Role="tb_Comprobante">
+              <PropertyRef Name="IdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBFacturacion_ElectronicaModelStoreContainer" CdmEntityContainer="EntitiesFactElectronica">
+          <EntitySetMapping Name="tb_Cliente">
+            <EntityTypeMapping TypeName="DBFacturacion_ElectronicaModel.tb_Cliente">
+              <MappingFragment StoreEntitySet="tb_Cliente">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+                <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Cedula_RUC" ColumnName="Cedula_RUC" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="EsEmpresa" ColumnName="EsEmpresa" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Comprobante">
+            <EntityTypeMapping TypeName="DBFacturacion_ElectronicaModel.tb_Comprobante">
+              <MappingFragment StoreEntitySet="tb_Comprobante">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdComprobante" ColumnName="IdComprobante" />
+                <ScalarProperty Name="IdTipoDocumento" ColumnName="IdTipoDocumento" />
+                <ScalarProperty Name="IdEstado_cbte" ColumnName="IdEstado_cbte" />
+                <ScalarProperty Name="secuencial" ColumnName="secuencial" />
+                <ScalarProperty Name="Cedula_Ruc" ColumnName="Cedula_Ruc" />
+                <ScalarProperty Name="Numero_Autorizacion" ColumnName="Numero_Autorizacion" />
+                <ScalarProperty Name="s_XML" ColumnName="s_XML" />
+                <ScalarProperty Name="s_XML_Firmado" ColumnName="s_XML_Firmado" />
+                <ScalarProperty Name="XML_file" ColumnName="XML_file" />
+                <ScalarProperty Name="Fecha_Emi_Fact" ColumnName="Fecha_Emi_Fact" />
+                <ScalarProperty Name="Fecha_transaccion" ColumnName="Fecha_transaccion" />
+                <ScalarProperty Name="FechaAutorizacion" ColumnName="FechaAutorizacion" />
+                <ScalarProperty Name="IdEstadoDeEnvio" ColumnName="IdEstadoDeEnvio" />
+                <ScalarProperty Name="ClaveContingencia" ColumnName="ClaveContingencia" />
+                <ScalarProperty Name="RutaArchivo" ColumnName="RutaArchivo" />
+                <ScalarProperty Name="EstadoDoc" ColumnName="EstadoDoc" />
+                <ScalarProperty Name="Error" ColumnName="Error" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IdError_Sri" ColumnName="IdError_Sri" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Empresa">
+            <EntityTypeMapping TypeName="DBFacturacion_ElectronicaModel.tb_Empresa">
+              <MappingFragment StoreEntitySet="tb_Empresa">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+                <ScalarProperty Name="NombreComercial" ColumnName="NombreComercial" />
+                <ScalarProperty Name="RUC" ColumnName="RUC" />
+                <ScalarProperty Name="DirMatriz" ColumnName="DirMatriz" />
+                <ScalarProperty Name="ContribuyenteEspecial" ColumnName="ContribuyenteEspecial" />
+                <ScalarProperty Name="ObligadoAllevarConta" ColumnName="ObligadoAllevarConta" />
+                <ScalarProperty Name="NombreCertificado" ColumnName="NombreCertificado" />
+                <ScalarProperty Name="Clave_Certificado" ColumnName="Clave_Certificado" />
+                <ScalarProperty Name="FechaValidez" ColumnName="FechaValidez" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_sis_Log_Error_Vzen">
+            <EntityTypeMapping TypeName="DBFacturacion_ElectronicaModel.tb_sis_Log_Error_Vzen">
+              <MappingFragment StoreEntitySet="tb_sis_Log_Error_Vzen">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Fecha_Trans" ColumnName="Fecha_Trans" />
+                <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Clase" ColumnName="Clase" />
+                <ScalarProperty Name="Pantalla" ColumnName="Pantalla" />
+                <ScalarProperty Name="Asamble" ColumnName="Asamble" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Ip" ColumnName="Ip" />
+                <ScalarProperty Name="PC" ColumnName="PC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

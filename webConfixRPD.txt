@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+      <section name="Efirm.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    </sectionGroup>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+      <section name="Efirm.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.LocalDbConnectionFactory, EntityFramework">
+      <parameters>
+        <parameter value="v11.0" />
+      </parameters>
+    </defaultConnectionFactory>
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+    </providers>
+  </entityFramework>
+  <connectionStrings>
+    <add name="EntitiesFactElectronica" connectionString="metadata=res://*/ModelEntitiesFactElectronica.csdl|res://*/ModelEntitiesFactElectronica.ssdl|res://*/ModelEntitiesFactElectronica.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.2.253;initial catalog=DBFacturacion_Electronica;user id=sa;password=admin*2016;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+    <add name="Entity_conexion_fixed" connectionString="metadata=res://*/Model_conexion_efixed.csdl|res://*/Model_conexion_efixed.ssdl|res://*/Model_conexion_efixed.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.2.253;initial catalog=DBERP_RAPI_PRODUCCION;user id=sa;password=admin*2016;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+  <system.serviceModel>
+
+    <bindings>
+      <basicHttpBinding>
+        <binding name="EFirmPortBinding" maxReceivedMessageSize="10000000" />
+        <binding name="BasicHttpBinding_IWs_Contribuyente" maxReceivedMessageSize="10000000" />
+        <binding name="BasicHttpBinding_IWs_Empresa" maxReceivedMessageSize="10000000" />
+        <binding name="BasicHttpBinding_IWs_Comprobante" />
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://186.101.230.247,1433:8094/Cal" binding="basicHttpBinding"
+        bindingConfiguration="EFirmPortBinding" contract="Java.EFirm"
+        name="EFirmPort" />
+      <endpoint address="http://186.101.230.247,1433:1601/Ws_Contribuyente.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IWs_Contribuyente"
+        contract="WSEfirm_Contribuyente.IWs_Contribuyente" name="BasicHttpBinding_IWs_Contribuyente" />
+      <endpoint address="http://186.101.230.247,1433:1601/Ws_Empresa.svc" binding="basicHttpBinding"
+        bindingConfiguration="BasicHttpBinding_IWs_Empresa" contract="WSEfirm_Empresa.IWs_Empresa"
+        name="BasicHttpBinding_IWs_Empresa" />
+      <endpoint address="http://186.101.230.247,1433:1601/Ws_Comprobante.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IWs_Comprobante"
+        contract="WSEfirm_cbte.IWs_Comprobante" name="BasicHttpBinding_IWs_Comprobante" />
+    </client>
+
+  </system.serviceModel>
+
+
+  <applicationSettings>
+    <Efirm.Properties.Settings>
+      <setting name="P_ESTADO_CARGA_EFIRM" serializeAs="String">
+        <value>SERVER</value>
+      </setting>
+      <setting name="MOSTRAR_CONSOLA" serializeAs="String">
+        <value>N</value>
+      </setting>
+      <setting name="AUTORIZADO_ENVIO_CORREO" serializeAs="String">
+        <value>S</value>
+      </setting>
+      <setting name="PatchXml" serializeAs="String">
+        <value>C:\Comprobantes EFIRM\Repositorio de Comprobantes\</value>
+      </setting>
+      <setting name="Cliente_Fuente" serializeAs="String">
+        <value>FIXED</value>
+      </setting>
+      <setting name="Formato_fecha" serializeAs="String">
+        <value>{0:yyyy/MM/dd}</value>
+      </setting>
+      <setting name="Version" serializeAs="String">
+        <value>201505291800</value>
+      </setting>
+      <setting name="Formato_fecha_xml_sri" serializeAs="String">
+        <value>{0:dd/MM/yyyy}</value>
+      </setting>
+      <setting name="PatchMaqLocalXML" serializeAs="String">
+        <value>C:\</value>
+      </setting>
+      <setting name="Ocon_Efirm" serializeAs="String">
+        <value>Data Source=186.101.230.247,1433;Initial Catalog=DB_Fact_Elect_Fixed;User ID=sa;Password=admin*2016</value>
+      </setting>
+    </Efirm.Properties.Settings>
+  </applicationSettings>
+  <userSettings>
+    <Efirm.Properties.Settings>
+      <setting name="Conexioncliente" serializeAs="String">
+        <value>Data Source=186.101.230.247,1433;Initial Catalog=PRODUCCION;User ID=sa;Password=admin*2012</value>
+      </setting>
+    </Efirm.Properties.Settings>
+  </userSettings>
+</configuration>

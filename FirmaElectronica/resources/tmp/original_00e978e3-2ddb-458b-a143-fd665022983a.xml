@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>1</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>FIXED S.A</razonSocial>
+    <nombreComercial>FIXED S.A</nombreComercial>
+    <ruc>0990110662001</ruc>
+    <claveAcceso>0501201801099011066200110010010000002041234567813</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000204</secuencial>
+    <dirMatriz>Av. Juan Tanca Marengo Km 4.5</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>05/01/2018</fechaEmision>
+    <dirEstablecimiento>Av. Juan Tanca Marengo Km 4.5</dirEstablecimiento>
+    <contribuyenteEspecial>1027</contribuyenteEspecial>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>CARLOS CEDENO</razonSocialComprador>
+    <identificacionComprador>0925424970001</identificacionComprador>
+    <totalSinImpuestos>101948.34</totalSinImpuestos>
+    <totalDescuento>0</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <baseImponible>101948</baseImponible>
+        <valor>12233.80</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <importeTotal>114182.14</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>114182.14</total>
+        <plazo>0</plazo>
+        <unidadTiempo>dia</unidadTiempo>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>ESTR-MAOB-0000000007</codigoPrincipal>
+      <codigoAuxiliar>ESTR-MAOB-0000000007</codigoAuxiliar>
+      <descripcion>COLGADORES Y TENSORES</descripcion>
+      <cantidad>1359.43</cantidad>
+      <precioUnitario>1.367811</precioUnitario>
+      <descuento>0</descuento>
+      <precioTotalSinImpuesto>1859.44</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Medida" valor="KG" />
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12</tarifa>
+          <baseImponible>1859.44</baseImponible>
+          <valor>223.13</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>ESTR-MAOB-0000000006</codigoPrincipal>
+      <codigoAuxiliar>ESTR-MAOB-0000000006</codigoAuxiliar>
+      <descripcion>CORREAS</descripcion>
+      <cantidad>15792.25</cantidad>
+      <precioUnitario>1.367811</precioUnitario>
+      <descuento>0</descuento>
+      <precioTotalSinImpuesto>21600.81</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Medida" valor="KG" />
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12</tarifa>
+          <baseImponible>21600.81</baseImponible>
+          <valor>2592.10</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>ESTR-MAOB-0000000005</codigoPrincipal>
+      <codigoAuxiliar>ESTR-MAOB-0000000005</codigoAuxiliar>
+      <descripcion>CERCHAS DE CUBIERTA</descripcion>
+      <cantidad>19978.43</cantidad>
+      <precioUnitario>1.367811</precioUnitario>
+      <descuento>0</descuento>
+      <precioTotalSinImpuesto>27326.72</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Medida" valor="KG" />
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12</tarifa>
+          <baseImponible>27326.72</baseImponible>
+          <valor>3279.21</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>ESTR-MAOB-0000000004</codigoPrincipal>
+      <codigoAuxiliar>ESTR-MAOB-0000000004</codigoAuxiliar>
+      <descripcion>COLUMNAS INTERIORES (30 UNID)</descripcion>
+      <cantidad>32990.25</cantidad>
+      <precioUnitario>1.367811</precioUnitario>
+      <descuento>0</descuento>
+      <precioTotalSinImpuesto>45124.43</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Medida" valor="KG" />
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12</tarifa>
+          <baseImponible>45124.43</baseImponible>
+          <valor>5414.93</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>ESTR-MAOB-0000000003</codigoPrincipal>
+      <codigoAuxiliar>ESTR-MAOB-0000000003</codigoAuxiliar>
+      <descripcion>COLUMNAS PERIMETRALES (64 UNID)</descripcion>
+      <cantidad>4413.58</cantidad>
+      <precioUnitario>1.367811</precioUnitario>
+      <descuento>0</descuento>
+      <precioTotalSinImpuesto>6036.94</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Medida" valor="KG" />
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12</tarifa>
+          <baseImponible>6036.94</baseImponible>
+          <valor>724.43</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="MAIL">carloscede@hotmail.es</campoAdicional>
+    <campoAdicional nombre="OBRA">2068</campoAdicional>
+    <campoAdicional nombre="FECHA_VENCI">10/11/2017 00:00:00</campoAdicional>
+    <campoAdicional nombre="FORMA_PAGO">CONTADO</campoAdicional>
+    <campoAdicional nombre="REFERENCIA">CORRESPONDIENTE A PLANILLA DE AVANCE 03-2068</campoAdicional>
+    <campoAdicional nombre="DIRECCION_CLIENTE">AV. 9 DE OCTUBRE 729 Y BOYACA</campoAdicional>
+  </infoAdicional>
+</factura>

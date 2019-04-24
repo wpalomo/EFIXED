@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A739BEEE-CD06-4647-84A4-8E76BED4A54A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FirmElect.Info</RootNamespace>
+    <AssemblyName>FirmElect.Info</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EAGetMail">
+      <HintPath>..\FirmElect.Recursos\dll\EAGetMail.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Archivo_Info.cs" />
+    <Compile Include="Ayudas.cs" />
+    <Compile Include="class_sri\Factura_V2\destino.cs" />
+    <Compile Include="class_sri\Factura_V2\detalleImpuestosDetalleImpuesto.cs" />
+    <Compile Include="class_sri\Factura_V2\factura.cs" />
+    <Compile Include="class_sri\Factura_V2\facturaCampoAdicional.cs" />
+    <Compile Include="class_sri\Factura_V2\facturaDetalle.cs" />
+    <Compile Include="class_sri\Factura_V2\facturaDetalleDetAdicional.cs" />
+    <Compile Include="class_sri\Factura_V2\facturaInfoFactura.cs" />
+    <Compile Include="class_sri\Factura_V2\facturaInfoFacturaTotalImpuesto.cs" />
+    <Compile Include="class_sri\Factura_V2\facturaInfoSustitutivaGuiaRemision.cs" />
+    <Compile Include="class_sri\Factura_V2\factura_Ride_Info.cs" />
+    <Compile Include="class_sri\Factura_V2\impuesto.cs" />
+    <Compile Include="class_sri\Factura_V2\infoTributaria.cs" />
+    <Compile Include="class_sri\Factura_V2\pagosPago.cs" />
+    <Compile Include="class_sri\Factura_V2\pagosPago_info.cs" />
+    <Compile Include="class_sri\Factura_V2\reembolsosReembolsoDetalle.cs" />
+    <Compile Include="class_sri\Factura_V2\rubro.cs" />
+    <Compile Include="class_sri\GuiaRemision\guiaRemision.cs" />
+    <Compile Include="class_sri\GuiaRemision\guiaRemision_Ride_Info.cs" />
+    <Compile Include="class_sri\NotaCredito\notaCredito.cs" />
+    <Compile Include="class_sri\NotaCredito\notaCredito_Ride_Info.cs" />
+    <Compile Include="class_sri\NotaDebito\notaDebito.cs" />
+    <Compile Include="class_sri\NotaDebito\notaDebito_Ride_Info.cs" />
+    <Compile Include="class_sri\Retencion\comprobanteRetencion.cs" />
+    <Compile Include="class_sri\Retencion\comprobanteRetencion_Ride_Info.cs" />
+    <Compile Include="cl_Acciones_Info.cs" />
+    <Compile Include="cl_error_Info.cs" />
+    <Compile Include="cl_parametrosGenerales_Info.cs" />
+    <Compile Include="cl_parametros_generales_info.cs" />
+    <Compile Include="Cl_ValidarEmail.cs" />
+    <Compile Include="Enumeradores.cs" />
+    <Compile Include="Funciones.cs" />
+    <Compile Include="fx_Comprobante_generados_Info.cs" />
+    <Compile Include="fx_GeneradorXML_ValidarEmail_Info.cs" />
+    <Compile Include="fx_GeneradorXML_Comprobante_Info.cs" />
+    <Compile Include="fx_Generador_XML_ComprobanteId_Info.cs" />
+    <Compile Include="fx_horario_Info.cs" />
+    <Compile Include="Log_Exception\DalException.cs" />
+    <Compile Include="Log_Exception\Logger.cs" />
+    <Compile Include="Log_Exception\LoggingManager.cs" />
+    <Compile Include="mail_Catalogo_Info.cs" />
+    <Compile Include="mail_correos_Info.cs" />
+    <Compile Include="mail_Cuentas_Correo_Info.cs" />
+    <Compile Include="mail_Cuentas_Correo_x_Empresa_Info.cs" />
+    <Compile Include="mail_Mensaje_Archi_Adjunto_Info.cs" />
+    <Compile Include="mail_Mensaje_Info.cs" />
+    <Compile Include="mail_Parametro_Info.cs" />
+    <Compile Include="mail_Validar_Correo_Info.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.cs" />
+    <Compile Include="Properties\Resource_Mensajes_Error.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource_Mensajes_Error.resx</DependentUpon>
+    </Compile>
+    <Compile Include="seg_menu_info.cs" />
+    <Compile Include="seg_menu_x_tb_empresa_info.cs" />
+    <Compile Include="seg_menu_x_tb_empresa_x_seg_usuario_info.cs" />
+    <Compile Include="seg_usuario_info.cs" />
+    <Compile Include="seg_usuario_x_tb_empresa_info.cs" />
+    <Compile Include="sp_consulta_x_cbtes_x_paginas_Info.cs" />
+    <Compile Include="sp_RecuperaciondeContraseña_Info.cs" />
+    <Compile Include="sp_Registro_Contribuyente_Info.cs" />
+    <Compile Include="sp_ValidarRegistros_Info.cs" />
+    <Compile Include="sp_VerificarRecuperaciondeContrasenia_Info.cs" />
+    <Compile Include="tb_Actividades_Horario_Acciones_Info.cs" />
+    <Compile Include="tb_Actividades_Horario_Info.cs" />
+    <Compile Include="tb_Actividades_Horario_Tipo_Ejecucion_Info.cs" />
+    <Compile Include="tb_Actividades_Horario_Tipo_Tiempo_Info.cs" />
+    <Compile Include="tb_Catalogo_Info.cs" />
+    <Compile Include="tb_Clave_Conting_Info.cs" />
+    <Compile Include="tb_Cliente_Info.cs" />
+    <Compile Include="tb_comprobante_exportado_base_ext_Info.cs" />
+    <Compile Include="tb_Comprobante_Hist_Eliminado_Info.cs" />
+    <Compile Include="tb_Comprobante_Info.cs" />
+    <Compile Include="tb_Comprobante_tipo_Info.cs" />
+    <Compile Include="tb_Comprobante_tipo_x_empresa_Info.cs" />
+    <Compile Include="tb_comprobante_x_valor_Info.cs" />
+    <Compile Include="tb_Contribuyente_Info.cs" />
+    <Compile Include="tb_directorio_Info.cs" />
+    <Compile Include="tb_Empresa_externa_Info.cs" />
+    <Compile Include="tb_Empresa_Info.cs" />
+    <Compile Include="tb_FormaPago_info.cs" />
+    <Compile Include="tb_Parametro_Info.cs" />
+    <Compile Include="tb_sis_Log_Error_Vzen_Info.cs" />
+    <Compile Include="tb_Tocken_Info.cs" />
+    <Compile Include="tb_tocken_x_usuario_tocken_Info.cs" />
+    <Compile Include="tb_usuario_Info.cs" />
+    <Compile Include="tb_Usuario_Tocken_Info.cs" />
+    <Compile Include="vw_Comprobantes_recibidos_Info.cs" />
+    <Compile Include="vw_mail_Cuentas_Correo_x_mail_Mensaje_Tipo_Info.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\tb_Clave_Conting_Info.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Factura_V_2_1_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\comprobanteRetencion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\factura.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\guiaRemision.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\notaCredito.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\notaDebito.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resource_Mensajes_Error.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource_Mensajes_Error.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

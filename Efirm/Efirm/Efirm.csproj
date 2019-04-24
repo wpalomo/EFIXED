@@ -1,0 +1,1493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A39E870-9D76-44BE-A2FC-704721619433}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Efirm</RootNamespace>
+    <AssemblyName>Efirm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\192.168.25.29\Ride\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\192.168.25.29\Ride\</InstallUrl>
+    <ProductName>Efixed</ProductName>
+    <PublisherName>Efixed</PublisherName>
+    <SuiteName>Efixed</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3616332A3861945CEADCD07818B1E4EDE85C639A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Efirm_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Efirm.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\1400812973_9459.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Win.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Persistent.Base.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Reports.v12.1.Designer, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.SpellChecker.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.1.UI, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1.Extensions, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1.Extensions, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v12.1.Extensions, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v12.1.Extensions, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpellChecker.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="OpenPop, Version=2.0.5.0, Culture=neutral, PublicKeyToken=bebb5741791313cd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FirmElect.Recursos\dll\OpenPop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmBuscar_comprobantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscar_comprobantes.Designer.cs">
+      <DependentUpon>frmBuscar_comprobantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_CargarComprobantes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CargarComprobantes.Designer.cs">
+      <DependentUpon>UC_CargarComprobantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsErrors.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsErrors.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrador_cbtes_Auto_para_exportacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrador_cbtes_Auto_para_exportacion.Designer.cs">
+      <DependentUpon>frmAdministrador_cbtes_Auto_para_exportacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrador_Cbte_Electronicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrador_Cbte_Electronicos.Designer.cs">
+      <DependentUpon>frmAdministrador_Cbte_Electronicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAuditoria_Anulacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuditoria_Anulacion.Designer.cs">
+      <DependentUpon>frmAuditoria_Anulacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCargaDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCargaDatos.Designer.cs">
+      <DependentUpon>frmCargaDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmComprobantes_autorizados_no_autorizados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComprobantes_autorizados_no_autorizados.Designer.cs">
+      <DependentUpon>frmComprobantes_autorizados_no_autorizados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmComprobantes_recibidos_sin_respuestas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComprobantes_recibidos_sin_respuestas.Designer.cs">
+      <DependentUpon>frmComprobantes_recibidos_sin_respuestas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmComprobantes_en_repocitorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComprobantes_en_repocitorio.Designer.cs">
+      <DependentUpon>frmComprobantes_en_repocitorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmComprobantes_validos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComprobantes_validos.Designer.cs">
+      <DependentUpon>frmComprobantes_validos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsole.Designer.cs">
+      <DependentUpon>frmConsole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDirectorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDirectorios.Designer.cs">
+      <DependentUpon>frmDirectorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDisenio_Reporte_Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDisenio_Reporte_Consulta.Designer.cs">
+      <DependentUpon>frmDisenio_Reporte_Consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDisenio_Reporte_Mant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDisenio_Reporte_Mant.Designer.cs">
+      <DependentUpon>frmDisenio_Reporte_Mant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmisor.Designer.cs">
+      <DependentUpon>frmEmisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmisorMant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmisorMant.Designer.cs">
+      <DependentUpon>frmEmisorMant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEsperar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEsperar.Designer.cs">
+      <DependentUpon>frmEsperar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImportarClavesContin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportarClavesContin.Designer.cs">
+      <DependentUpon>frmImportarClavesContin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImportarClavesContin_Consu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportarClavesContin_Consu.Designer.cs">
+      <DependentUpon>frmImportarClavesContin_Consu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImpre_Descar_Anu_Lotes_Cbtes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImpre_Descar_Anu_Lotes_Cbtes.Designer.cs">
+      <DependentUpon>frmImpre_Descar_Anu_Lotes_Cbtes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogError.Designer.cs">
+      <DependentUpon>frmLogError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMensaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMensaje.Designer.cs">
+      <DependentUpon>frmMensaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmParametro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmParametro.Designer.cs">
+      <DependentUpon>frmParametro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmParametros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmParametros.Designer.cs">
+      <DependentUpon>frmParametros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRpt_Cbtes_Auto_NoAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRpt_Cbtes_Auto_NoAuto.Designer.cs">
+      <DependentUpon>frmRpt_Cbtes_Auto_NoAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmseg_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmseg_login.designer.cs">
+      <DependentUpon>frmseg_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmseg_login_x_empresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmseg_login_x_empresa.designer.cs">
+      <DependentUpon>frmseg_login_x_empresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmseg_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmseg_main.designer.cs">
+      <DependentUpon>frmseg_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmseg_menu_cons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmseg_menu_cons.designer.cs">
+      <DependentUpon>frmseg_menu_cons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmseg_menu_mant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmseg_menu_mant.designer.cs">
+      <DependentUpon>frmseg_menu_mant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmseg_menu_x_empresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmseg_menu_x_empresa.designer.cs">
+      <DependentUpon>frmseg_menu_x_empresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmseg_menu_x_empresa_x_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmseg_menu_x_empresa_x_usuario.designer.cs">
+      <DependentUpon>frmseg_menu_x_empresa_x_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmseg_usuario_cons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmseg_usuario_cons.designer.cs">
+      <DependentUpon>frmseg_usuario_cons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmseg_usuario_mant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmseg_usuario_mant.designer.cs">
+      <DependentUpon>frmseg_usuario_mant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest.CS">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.CS">
+      <DependentUpon>frmTest.CS</DependentUpon>
+    </Compile>
+    <Compile Include="frmTestMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTestMail.Designer.cs">
+      <DependentUpon>frmTestMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTextEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTextEdit.Designer.cs">
+      <DependentUpon>frmTextEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTocken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTocken.Designer.cs">
+      <DependentUpon>frmTocken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmValidadorFileXML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidadorFileXML.Designer.cs">
+      <DependentUpon>frmValidadorFileXML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrador_Comprobantes_recibidos_EBIZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrador_Comprobantes_recibidos_EBIZ.Designer.cs">
+      <DependentUpon>frmAdministrador_Comprobantes_recibidos_EBIZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXML_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXML_Edit.Designer.cs">
+      <DependentUpon>frmXML_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_comprobantes_generados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_comprobantes_generados.Designer.cs">
+      <DependentUpon>Frm_comprobantes_generados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WSEfirm_cbte\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WSEfirm_Contribuyente\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WSEfirm_Empresa\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ucge_menu_superior_cons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucge_menu_superior_cons.designer.cs">
+      <DependentUpon>ucge_menu_superior_cons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucge_menu_superior_mant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucge_menu_superior_mant.designer.cs">
+      <DependentUpon>ucge_menu_superior_mant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucseg_menu_x_empresa_x_usuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucseg_menu_x_empresa_x_usuario.designer.cs">
+      <DependentUpon>ucseg_menu_x_empresa_x_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Botones_Paginas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Botones_Paginas.Designer.cs">
+      <DependentUpon>UC_Botones_Paginas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Comprobantes_Autorizados_para_exportacion_Base_Exter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Comprobantes_Autorizados_para_exportacion_Base_Exter.Designer.cs">
+      <DependentUpon>UC_Comprobantes_Autorizados_para_exportacion_Base_Exter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Comprobante_Pendientes_Autorizacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Comprobante_Pendientes_Autorizacion.Designer.cs">
+      <DependentUpon>UC_Comprobante_Pendientes_Autorizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Comprobante_Autoriz_No_Autoriz_x_SRI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Comprobante_Autoriz_No_Autoriz_x_SRI.Designer.cs">
+      <DependentUpon>UC_Comprobante_Autoriz_No_Autoriz_x_SRI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Comprobante_x_Enviar_firmar_al_SRI_efirm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Comprobante_x_Enviar_firmar_al_SRI_efirm.Designer.cs">
+      <DependentUpon>UC_Comprobante_x_Enviar_firmar_al_SRI_efirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Comprobante_En_Repositorio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Comprobante_En_Repositorio.Designer.cs">
+      <DependentUpon>UC_Comprobante_En_Repositorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ConsultarCbtes_x_ClaveContingencia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ConsultarCbtes_x_ClaveContingencia.Designer.cs">
+      <DependentUpon>UC_ConsultarCbtes_x_ClaveContingencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ContenedorHilos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ContenedorHilos.Designer.cs">
+      <DependentUpon>UC_ContenedorHilos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Emisor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Emisor.Designer.cs">
+      <DependentUpon>UC_Emisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Hilo_Display.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Hilo_Display.Designer.cs">
+      <DependentUpon>UC_Hilo_Display.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Horario_Actividades.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Horario_Actividades.Designer.cs">
+      <DependentUpon>UC_Horario_Actividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Impr_descar_cbtes_Lote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Impr_descar_cbtes_Lote.Designer.cs">
+      <DependentUpon>UC_Impr_descar_cbtes_Lote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_TipoDocumento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_TipoDocumento.Designer.cs">
+      <DependentUpon>UC_TipoDocumento.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmBuscar_comprobantes.resx">
+      <DependentUpon>frmBuscar_comprobantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CargarComprobantes.resx">
+      <DependentUpon>UC_CargarComprobantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrador_cbtes_Auto_para_exportacion.resx">
+      <DependentUpon>frmAdministrador_cbtes_Auto_para_exportacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrador_Cbte_Electronicos.resx">
+      <DependentUpon>frmAdministrador_Cbte_Electronicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAuditoria_Anulacion.resx">
+      <DependentUpon>frmAuditoria_Anulacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCargaDatos.resx">
+      <DependentUpon>frmCargaDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComprobantes_autorizados_no_autorizados.resx">
+      <DependentUpon>frmComprobantes_autorizados_no_autorizados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComprobantes_recibidos_sin_respuestas.resx">
+      <DependentUpon>frmComprobantes_recibidos_sin_respuestas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComprobantes_en_repocitorio.resx">
+      <DependentUpon>frmComprobantes_en_repocitorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComprobantes_validos.resx">
+      <DependentUpon>frmComprobantes_validos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsole.resx">
+      <DependentUpon>frmConsole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDirectorios.resx">
+      <DependentUpon>frmDirectorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDisenio_Reporte_Consulta.resx">
+      <DependentUpon>frmDisenio_Reporte_Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDisenio_Reporte_Mant.resx">
+      <DependentUpon>frmDisenio_Reporte_Mant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmisor.resx">
+      <DependentUpon>frmEmisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmisorMant.resx">
+      <DependentUpon>frmEmisorMant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEsperar.resx">
+      <DependentUpon>frmEsperar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportarClavesContin.resx">
+      <DependentUpon>frmImportarClavesContin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportarClavesContin_Consu.resx">
+      <DependentUpon>frmImportarClavesContin_Consu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImpre_Descar_Anu_Lotes_Cbtes.resx">
+      <DependentUpon>frmImpre_Descar_Anu_Lotes_Cbtes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogError.resx">
+      <DependentUpon>frmLogError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMensaje.resx">
+      <DependentUpon>frmMensaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmParametro.resx">
+      <DependentUpon>frmParametro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmParametros.resx">
+      <DependentUpon>frmParametros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRpt_Cbtes_Auto_NoAuto.resx">
+      <DependentUpon>frmRpt_Cbtes_Auto_NoAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmseg_login.resx">
+      <DependentUpon>frmseg_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmseg_login_x_empresa.resx">
+      <DependentUpon>frmseg_login_x_empresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmseg_main.resx">
+      <DependentUpon>frmseg_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmseg_menu_cons.resx">
+      <DependentUpon>frmseg_menu_cons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmseg_menu_mant.resx">
+      <DependentUpon>frmseg_menu_mant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmseg_menu_x_empresa.resx">
+      <DependentUpon>frmseg_menu_x_empresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmseg_menu_x_empresa_x_usuario.resx">
+      <DependentUpon>frmseg_menu_x_empresa_x_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmseg_usuario_cons.resx">
+      <DependentUpon>frmseg_usuario_cons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmseg_usuario_mant.resx">
+      <DependentUpon>frmseg_usuario_mant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.CS</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTestMail.resx">
+      <DependentUpon>frmTestMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTextEdit.resx">
+      <DependentUpon>frmTextEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTocken.resx">
+      <DependentUpon>frmTocken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValidadorFileXML.resx">
+      <DependentUpon>frmValidadorFileXML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrador_Comprobantes_recibidos_EBIZ.resx">
+      <DependentUpon>frmAdministrador_Comprobantes_recibidos_EBIZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXML_Edit.resx">
+      <DependentUpon>frmXML_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_comprobantes_generados.resx">
+      <DependentUpon>Frm_comprobantes_generados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucge_menu_superior_cons.resx">
+      <DependentUpon>ucge_menu_superior_cons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucge_menu_superior_mant.resx">
+      <DependentUpon>ucge_menu_superior_mant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucseg_menu_x_empresa_x_usuario.resx">
+      <DependentUpon>ucseg_menu_x_empresa_x_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Botones_Paginas.resx">
+      <DependentUpon>UC_Botones_Paginas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Comprobantes_Autorizados_para_exportacion_Base_Exter.resx">
+      <DependentUpon>UC_Comprobantes_Autorizados_para_exportacion_Base_Exter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Comprobante_Pendientes_Autorizacion.resx">
+      <DependentUpon>UC_Comprobante_Pendientes_Autorizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Comprobante_En_Repositorio.resx">
+      <DependentUpon>UC_Comprobante_En_Repositorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Comprobante_Autoriz_No_Autoriz_x_SRI.resx">
+      <DependentUpon>UC_Comprobante_Autoriz_No_Autoriz_x_SRI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Comprobante_x_Enviar_firmar_al_SRI_efirm.resx">
+      <DependentUpon>UC_Comprobante_x_Enviar_firmar_al_SRI_efirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ConsultarCbtes_x_ClaveContingencia.resx">
+      <DependentUpon>UC_ConsultarCbtes_x_ClaveContingencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ContenedorHilos.resx">
+      <DependentUpon>UC_ContenedorHilos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Emisor.resx">
+      <DependentUpon>UC_Emisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Hilo_Display.resx">
+      <DependentUpon>UC_Hilo_Display.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Horario_Actividades.resx">
+      <DependentUpon>UC_Horario_Actividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Impr_descar_cbtes_Lote.resx">
+      <DependentUpon>UC_Impr_descar_cbtes_Lote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_TipoDocumento.resx">
+      <DependentUpon>UC_TipoDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsErrors.xsc">
+      <DependentUpon>dsErrors.xsd</DependentUpon>
+    </None>
+    <None Include="dsErrors.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsErrors.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsErrors.xss">
+      <DependentUpon>dsErrors.xsd</DependentUpon>
+    </None>
+    <None Include="Efirm_ClaveTemporal.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\FirmElect.Info.tb_Catalogo_Info.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.tb_Comprobante_Info.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.tb_Contribuyente_Info.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.tb_Empresa_Info.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\WSEfirm_cbte\Efirm.WSEfirm_cbte.consultar_listado_comprobantesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSEfirm_cbte\Efirm.WSEfirm_cbte.getXMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSEfirm_cbte\Efirm.WSEfirm_cbte.Lista_TipoComprobantesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSEfirm_cbte\Ws_Comprobante.wsdl" />
+    <None Include="Service References\WSEfirm_cbte\Ws_Comprobante.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSEfirm_cbte\Ws_Comprobante1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSEfirm_cbte\Ws_Comprobante2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSEfirm_Contribuyente\Efirm.WSEfirm_Contribuyente.GetContribuyenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSEfirm_Contribuyente\Efirm.WSEfirm_Contribuyente.GetContribuyente_InfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSEfirm_Contribuyente\Efirm.WSEfirm_Contribuyente.Modificar_GetContribuyente_InfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSEfirm_Contribuyente\Ws_Contribuyente.wsdl" />
+    <None Include="Service References\WSEfirm_Contribuyente\Ws_Contribuyente.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSEfirm_Contribuyente\Ws_Contribuyente1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSEfirm_Contribuyente\Ws_Contribuyente2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSEfirm_Empresa\Efirm.WSEfirm_Empresa.GetEmpresasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSEfirm_Empresa\Efirm.WSEfirm_Empresa.GetEmpresas_x_AliasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSEfirm_Empresa\Efirm.WSEfirm_Empresa.GetEmpresas_x_UrlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSEfirm_Empresa\Efirm.WSEfirm_Empresa.GrabarDBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSEfirm_Empresa\Ws_Empresa.wsdl" />
+    <None Include="Service References\WSEfirm_Empresa\Ws_Empresa.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSEfirm_Empresa\Ws_Empresa1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSEfirm_Empresa\Ws_Empresa2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anular_128x128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1400812973_9459.ico" />
+    <Content Include="Resources\1400809061_126734.ico" />
+    <Content Include="Resources\1400811525_55753.ico" />
+    <Content Include="Resources\1400812973_9459.ico" />
+    <Content Include="Resources\1403740486_300101.ico" />
+    <None Include="Resources\1417488454_pdf.png" />
+    <None Include="Resources\menu_128x128.png" />
+    <None Include="Resources\Formularios_128x128.png" />
+    <None Include="Resources\temas_128x128.png" />
+    <None Include="Resources\fx_ico.png" />
+    <None Include="Resources\if_plus_1646001.png" />
+    <None Include="Resources\if_system-software-update_28709.png" />
+    <None Include="Resources\24_-_Eye-128.png" />
+    <None Include="Resources\if_Document_file_export_sending_exit_send_1886950.png" />
+    <None Include="Resources\if_Artboard_1_1790656.png" />
+    <None Include="Resources\if_icon-74-document-search_315198.png" />
+    <None Include="Resources\if_fax_318578 %281%29.png" />
+    <None Include="Resources\if_Save_1493294.png" />
+    <None Include="Resources\FIXED.png" />
+    <None Include="Resources\buscar_folder_64x64.png" />
+    <None Include="Resources\if_icon-101-folder-search_314785.png" />
+    <None Include="Resources\if_icon-101-folder-search_314785 %282%29.png" />
+    <None Include="Resources\if_icon-101-folder-search_314785 %283%29.png" />
+    <None Include="Resources\if_kde-folder-saved-search_25195 %281%29.png" />
+    <None Include="Resources\folder-next-48.png" />
+    <None Include="Resources\folder-next-32.png" />
+    <None Include="Resources\folder-next-321.png" />
+    <None Include="Resources\if_refresh_71027.png" />
+    <None Include="Resources\if_Synchronize_27883.png" />
+    <Content Include="Resources\XML_Caracteres_Especiales.xml" />
+    <None Include="Service References\WSEfirm_cbte\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WSEfirm_cbte\configuration.svcinfo" />
+    <None Include="Service References\WSEfirm_cbte\configuration91.svcinfo" />
+    <None Include="Service References\WSEfirm_cbte\Ws_Comprobante.disco" />
+    <None Include="Service References\WSEfirm_Empresa\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WSEfirm_Empresa\configuration.svcinfo" />
+    <None Include="Service References\WSEfirm_Empresa\configuration91.svcinfo" />
+    <None Include="Service References\WSEfirm_Empresa\Ws_Empresa.disco" />
+    <None Include="Service References\WSEfirm_Contribuyente\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WSEfirm_Contribuyente\configuration.svcinfo" />
+    <None Include="Service References\WSEfirm_Contribuyente\configuration91.svcinfo" />
+    <None Include="Service References\WSEfirm_Contribuyente\Ws_Contribuyente.disco" />
+    <None Include="Resources\xml_firmado_no_auto_32x32.png" />
+    <None Include="Resources\xml_recibido_32x32.png" />
+    <None Include="Resources\xml_recibido1.png" />
+    <None Include="Resources\xml_ok_32x32.png" />
+    <None Include="Resources\xml_ok1.png" />
+    <None Include="Resources\xml_firmado_autorizado_32x32.png" />
+    <None Include="Resources\xml_firmado_autorizado1.png" />
+    <None Include="Resources\xml_firmado_aprobado_32x32.png" />
+    <None Include="Resources\xml_firmado_aprobado1.png" />
+    <None Include="Resources\xml_firmado_32x32.png" />
+    <None Include="Resources\xml_firmado1.png" />
+    <None Include="Resources\xml_32x32.png" />
+    <None Include="Resources\xml1.png" />
+    <None Include="Resources\xml_recibido.png" />
+    <None Include="Resources\xml_ok.png" />
+    <None Include="Resources\xml_firmado_autorizado.png" />
+    <None Include="Resources\xml_firmado_aprobado.png" />
+    <None Include="Resources\xml_firmado.png" />
+    <None Include="Resources\xml.png" />
+    <None Include="Resources\1415237036_mypc_config.png" />
+    <None Include="Resources\document.png" />
+    <None Include="Resources\application-xml.png" />
+    <None Include="Resources\buscar_doc_64x64.png" />
+    <Content Include="Resources\Cube-128.png" />
+    <None Include="Resources\custom-reports-icon.png" />
+    <None Include="Resources\custom-reports-icon1.png" />
+    <None Include="Resources\custom-reports-icon2.png" />
+    <Content Include="Resources\Directory.ico" />
+    <None Include="Resources\Imprimir_64x64.png" />
+    <Content Include="Resources\LOGUIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FirmElect.Bus\FirmElect.Bus.csproj">
+      <Project>{ae0d2ebe-1fa9-451a-8c8e-6b1b72094bb1}</Project>
+      <Name>FirmElect.Bus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FirmElect.Data\FirmElect.Data.csproj">
+      <Project>{8b7a25bb-77a7-4972-902d-50d8e0f8271c}</Project>
+      <Name>FirmElect.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FirmElect.Info\FirmElect.Info.csproj">
+      <Project>{a739beee-cd06-4647-84a4-8e76bed4a54a}</Project>
+      <Name>FirmElect.Info</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FirmElect.Recursos\FirmElect.Recursos.csproj">
+      <Project>{5ae804f3-3ee4-4fc9-be51-6e92956f6084}</Project>
+      <Name>FirmElect.Recursos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FirmElect.Reports\FirmElect.Reports.csproj">
+      <Project>{6892bbcc-3807-4c3f-b815-b279ff7cb172}</Project>
+      <Name>FirmElect.Reports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MailEfirm\MailEfirm.csproj">
+      <Project>{352897af-0e7f-4327-b89d-30bffb29990e}</Project>
+      <Name>MailEfirm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WS_Efirm\WS_Efirm.csproj">
+      <Project>{24e3e5f8-e30b-443c-8ffc-d8dbd60546bf}</Project>
+      <Name>WS_Efirm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WSEfirm_cbte\" />
+    <WCFMetadataStorage Include="Service References\WSEfirm_Contribuyente\" />
+    <WCFMetadataStorage Include="Service References\WSEfirm_Empresa\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSDASC">
+      <Guid>{2206CEB0-19C1-11D1-89E0-00C04FD7A829}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="OLEDBError">
+      <Guid>{C8B522D5-5CF3-11CE-ADE5-00AA0044773D}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DevExpress.BonusSkins.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Charts.v12.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.CodeParser.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Data.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.ExpressApp.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.ExpressApp.Win.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.ExpressApp.Xpo.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Office.v12.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Persistent.Base.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.PivotGrid.v12.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Printing.v12.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Reports.v12.1.Designer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.RichEdit.v12.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.SpellChecker.v12.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v12.1.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Xpo.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraBars.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v12.1.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraEditors.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGrid.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraLayout.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraNavBar.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPivotGrid.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPrinting.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v12.1.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraRichEdit.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraRichEdit.v12.1.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler.v12.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler.v12.1.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraSpellChecker.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraTreeList.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraVerticalGrid.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraWizard.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Efirm.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="FirmElect.Bus.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="FirmElect.Data.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="FirmElect.Info.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="FirmElect.Recursos.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="FirmElect.Reports.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MailEfirm.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualBasic.PowerPacks.Vs">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\XML_Caracteres_Especiales.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="WS_Efirm.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

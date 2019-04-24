@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4a7d022e-d929-42b3-9d3f-0294b5630d0e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1601/Ws_Comprobante.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Ws_Comprobante.wsdl" MetadataType="Wsdl" ID="f28b3531-f040-4fc2-926b-aa52e9802573" SourceId="1" SourceUrl="http://localhost:1601/Ws_Comprobante.svc?wsdl" />
+    <MetadataFile FileName="Ws_Comprobante.xsd" MetadataType="Schema" ID="dc2d3135-a7dc-4649-9834-5d5d81022dc5" SourceId="1" SourceUrl="http://localhost:1601/Ws_Comprobante.svc?xsd=xsd1" />
+    <MetadataFile FileName="Ws_Comprobante1.xsd" MetadataType="Schema" ID="4061af51-3c27-4752-8a18-534e5e78629d" SourceId="1" SourceUrl="http://localhost:1601/Ws_Comprobante.svc?xsd=xsd0" />
+    <MetadataFile FileName="Ws_Comprobante.disco" MetadataType="Disco" ID="7dc7f93a-36b3-4ea1-b0ee-f5d50ed163d0" SourceId="1" SourceUrl="http://localhost:1601/Ws_Comprobante.svc?disco" />
+    <MetadataFile FileName="Ws_Comprobante2.xsd" MetadataType="Schema" ID="c3838e46-46fb-4edd-a166-c0ca342f39b4" SourceId="1" SourceUrl="http://localhost:1601/Ws_Comprobante.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

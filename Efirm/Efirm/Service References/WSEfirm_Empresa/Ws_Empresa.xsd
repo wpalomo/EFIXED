@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/FirmElect.Info" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/FirmElect.Info" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOftb_Empresa_Info">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tb_Empresa_Info" nillable="true" type="tns:tb_Empresa_Info" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftb_Empresa_Info" nillable="true" type="tns:ArrayOftb_Empresa_Info" />
+  <xs:complexType name="tb_Empresa_Info">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Alias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContribuyenteEspecial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DirMatriz" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IdAmbiente" type="xs:int" />
+      <xs:element minOccurs="0" name="IdEmpresa" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ObligadoAllevarConta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RUC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoEmision" type="xs:int" />
+      <xs:element minOccurs="0" name="cod_Ambiente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cod_TipoEmision" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="logo" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tb_Empresa_Info" nillable="true" type="tns:tb_Empresa_Info" />
+</xs:schema>

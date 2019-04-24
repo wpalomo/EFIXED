@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.0.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>ASOCIACION COLEGIO ALEMAN HUMBOLDT DE GUAYAQUIL</razonSocial>
+    <nombreComercial>ASO COL. ALEMAN HUMBOLDT</nombreComercial>
+    <ruc>0990110662001</ruc>
+    <claveAcceso>0202201801099011066200120010130000748641234567810</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>013</ptoEmi>
+    <secuencial>000074864</secuencial>
+    <dirMatriz>LOS CEIBOS, CALLE DR.HECTOR ROMERO 216 Y AV. DR.JOSE GARCIA M.</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>02/02/2018</fechaEmision>
+    <dirEstablecimiento>Ciudad Celeste, Av. Ing. Leon Febres-Cordero #4571</dirEstablecimiento>
+    <contribuyenteEspecial>5505</contribuyenteEspecial>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>05</tipoIdentificacionComprador>
+    <razonSocialComprador>FRANCO ZAMBRANO VERONICA NARCISA</razonSocialComprador>
+    <identificacionComprador>0917297079</identificacionComprador>
+    <direccionComprador>PROSPERINA, COOP. GALLEGOS LARA MZ T9 VILLA 7</direccionComprador>
+    <totalSinImpuestos>35.64</totalSinImpuestos>
+    <totalDescuento>246.65</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <baseImponible>35.64</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>35.64</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>01</formaPago>
+        <total>35.64</total>
+        <plazo>1</plazo>
+        <unidadTiempo>dias</unidadTiempo>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>0012</codigoPrincipal>
+      <descripcion>PENSION / BECA</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>282.29</precioUnitario>
+      <descuento>246.65</descuento>
+      <precioTotalSinImpuesto>35.64</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>0</codigoPorcentaje>
+          <tarifa>0.00</tarifa>
+          <baseImponible>35.64</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="PERIODO">Feb-2018</campoAdicional>
+    <campoAdicional nombre="APODERADO">FRANCO ZAMBRANO VERONICA NARCISA</campoAdicional>
+    <campoAdicional nombre="MAIL">veritof_arias@outlook.es</campoAdicional>
+    <campoAdicional nombre="ALUMNO">ARIAS FRANCO KARLA NAOMI</campoAdicional>
+    <campoAdicional nombre="GRADO">P 5 V</campoAdicional>
+  </infoAdicional>
+</factura>

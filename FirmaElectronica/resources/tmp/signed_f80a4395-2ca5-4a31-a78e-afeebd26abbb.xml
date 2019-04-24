@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>1</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>FIXED S.A</razonSocial>
+    <nombreComercial>FIXED S.A</nombreComercial>
+    <ruc>0990110662001</ruc>
+    <claveAcceso>0501201801099011066200110010010000002041234567813</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000204</secuencial>
+    <dirMatriz>Av. Juan Tanca Marengo Km 4.5</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>05/01/2018</fechaEmision>
+    <dirEstablecimiento>Av. Juan Tanca Marengo Km 4.5</dirEstablecimiento>
+    <contribuyenteEspecial>1027</contribuyenteEspecial>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>CARLOS CEDENO</razonSocialComprador>
+    <identificacionComprador>0925424970001</identificacionComprador>
+    <totalSinImpuestos>101948.34</totalSinImpuestos>
+    <totalDescuento>0</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <baseImponible>101948</baseImponible>
+        <valor>12233.80</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <importeTotal>114182.14</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>114182.14</total>
+        <plazo>0</plazo>
+        <unidadTiempo>dia</unidadTiempo>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>ESTR-MAOB-0000000007</codigoPrincipal>
+      <codigoAuxiliar>ESTR-MAOB-0000000007</codigoAuxiliar>
+      <descripcion>COLGADORES Y TENSORES</descripcion>
+      <cantidad>1359.43</cantidad>
+      <precioUnitario>1.367811</precioUnitario>
+      <descuento>0</descuento>
+      <precioTotalSinImpuesto>1859.44</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Medida" valor="KG"></detAdicional>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12</tarifa>
+          <baseImponible>1859.44</baseImponible>
+          <valor>223.13</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>ESTR-MAOB-0000000006</codigoPrincipal>
+      <codigoAuxiliar>ESTR-MAOB-0000000006</codigoAuxiliar>
+      <descripcion>CORREAS</descripcion>
+      <cantidad>15792.25</cantidad>
+      <precioUnitario>1.367811</precioUnitario>
+      <descuento>0</descuento>
+      <precioTotalSinImpuesto>21600.81</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Medida" valor="KG"></detAdicional>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12</tarifa>
+          <baseImponible>21600.81</baseImponible>
+          <valor>2592.10</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>ESTR-MAOB-0000000005</codigoPrincipal>
+      <codigoAuxiliar>ESTR-MAOB-0000000005</codigoAuxiliar>
+      <descripcion>CERCHAS DE CUBIERTA</descripcion>
+      <cantidad>19978.43</cantidad>
+      <precioUnitario>1.367811</precioUnitario>
+      <descuento>0</descuento>
+      <precioTotalSinImpuesto>27326.72</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Medida" valor="KG"></detAdicional>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12</tarifa>
+          <baseImponible>27326.72</baseImponible>
+          <valor>3279.21</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>ESTR-MAOB-0000000004</codigoPrincipal>
+      <codigoAuxiliar>ESTR-MAOB-0000000004</codigoAuxiliar>
+      <descripcion>COLUMNAS INTERIORES (30 UNID)</descripcion>
+      <cantidad>32990.25</cantidad>
+      <precioUnitario>1.367811</precioUnitario>
+      <descuento>0</descuento>
+      <precioTotalSinImpuesto>45124.43</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Medida" valor="KG"></detAdicional>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12</tarifa>
+          <baseImponible>45124.43</baseImponible>
+          <valor>5414.93</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>ESTR-MAOB-0000000003</codigoPrincipal>
+      <codigoAuxiliar>ESTR-MAOB-0000000003</codigoAuxiliar>
+      <descripcion>COLUMNAS PERIMETRALES (64 UNID)</descripcion>
+      <cantidad>4413.58</cantidad>
+      <precioUnitario>1.367811</precioUnitario>
+      <descuento>0</descuento>
+      <precioTotalSinImpuesto>6036.94</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Medida" valor="KG"></detAdicional>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12</tarifa>
+          <baseImponible>6036.94</baseImponible>
+          <valor>724.43</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="MAIL">carloscede@hotmail.es</campoAdicional>
+    <campoAdicional nombre="OBRA">2068</campoAdicional>
+    <campoAdicional nombre="FECHA_VENCI">10/11/2017 00:00:00</campoAdicional>
+    <campoAdicional nombre="FORMA_PAGO">CONTADO</campoAdicional>
+    <campoAdicional nombre="REFERENCIA">CORRESPONDIENTE A PLANILLA DE AVANCE 03-2068</campoAdicional>
+    <campoAdicional nombre="DIRECCION_CLIENTE">AV. 9 DE OCTUBRE 729 Y BOYACA</campoAdicional>
+  </infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature625387">
+<ds:SignedInfo Id="Signature-SignedInfo264186">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></ds:CanonicalizationMethod>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></ds:SignatureMethod>
+<ds:Reference Id="SignedPropertiesID402763" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature625387-SignedProperties781046">
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></ds:DigestMethod>
+<ds:DigestValue>fNqOMRhJtJ58qn+nQ1McELDSBrMDVGRr0L9XMRw6kSA=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1260529">
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></ds:DigestMethod>
+<ds:DigestValue>oqgaqhozpoO/a/SM3+BJD4iVoLAgDiW7tkQ7ysimNxQ=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-601061" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></ds:Transform>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></ds:DigestMethod>
+<ds:DigestValue>oTVOywoR4zSm06/76fUlVlbSZZEoyQNXOqmvBXtXxuw=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue196861">
+KyoJqN83bowJiDxcnWK77Vtc40a0YLLcy67ad32K8SQtzcYC+oB6FX9QYL1lsEB7ClblZlUlBAtO
+AldjWD66Y5WeqxR+UiMQnp5ULwkf6GzhRk0POZk9T3aga0aDiDlBEuPRKVukOaqLWX6uGmmuae2f
+WVv2oJd8PzXj5rC0ksqrE5XAplrihsSa6v+by0WZw9DWYBzuTVPuRWl1miGWRPZ2M0x+FiB03jgE
+go1lbW3ZjPa4+RpwhxPWYnMLmrrCuqYjg9qAdnxNUCKAWCLGH8qMyVdhhyvi40DICNmYgNHf4m/H
+GztAdAzSgb6y1/FKq04p0sxbYLF7sTW0y939Pg==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1260529">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJtTCCB52gAwIBAgIEWH+d8TANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE3MTIyOTE0MzEzMloXDTE5MTIyOTE1MDEz
+MlowgbcxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzE7MBEGA1UEBRMKMDAwMDI0ODg1ODAmBgNVBAMTH05BUkNJU0EgWU9MQU5E
+QSBTQUxUT1MgQ0VWQUxMT1MwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDpPTEQfCFI
+v+EeI5nim9oZwDqzOuEKH9FYqE8JeprQOSH3uI/IqkcL7aukTeKSPYRcOeYa7Wj5RkfTWzTYOI/S
+Tq2fBafsKiYfcOjtPjknxAgklNm3ceQn9iqhgtnCGSehGwRzra/CTiroswSeEmUjPUdgBegffV7l
+YRdqSnoKuN4e5x3X9eh0jxvv0Zt4Wfg8UoYrBFediFLCW8d3jddopZ//dA20Qc9Nkc2bKsh2LCIp
+l8xGawUdRnMOlGEpl93JRqBkeaFY2LLikNr6D/ToWKCisDTi+D4Ka+Sa4Mfv54rkJVLhubiSvFyp
+48rcF60JnQ22aTvlK8S8D8cQVo61AgMBAAGjggTbMIIE1zALBgNVHQ8EBAMCBSAwgZEGCCsGAQUF
+BwEBBIGEMIGBMD4GCCsGAQUFBzABhjJodHRwOi8vb2NzcC5lY2kuYmNlLmVjL2VqYmNhL3B1Ymxp
+Y3dlYi9zdGF0dXMvb2NzcDA/BggrBgEFBQcwAYYzaHR0cDovL29jc3AxLmVjaS5iY2UuZWMvZWpi
+Y2EvcHVibGljd2ViL3N0YXR1cy9vY3NwMD8GCisGAQQBgqg7AwoEMRMvQVNPQ0lBQ0lPTiBDT0xF
+R0lPIEFMRU1BTiBIVU1CT0xEVCBERSBHVUFZQVFVSUwwHQYKKwYBBAGCqDsDCwQPEw0wOTkwMTEw
+NjYyMDAxMBoGCisGAQQBgqg7AwEEDBMKMDkxODg1MzcxNDAfBgorBgEEAYKoOwMCBBETD05BUkNJ
+U0EgWU9MQU5EQTAWBgorBgEEAYKoOwMDBAgTBlNBTFRPUzAYBgorBgEEAYKoOwMEBAoTCENFVkFM
+TE9TMDMGCisGAQQBgqg7AwUEJRMjRElSRUNUT1JBIEZJTkFOQ0lFUkEgQURNSU5JU1RSQVRJVkEw
+TQYKKwYBBAGCqDsDBwQ/Ez1DRExBIExPUyBDRUlCT1MgQ0FMTEUgRFIgSEVDVE9SIFJPTUVSTyAy
+MTYgWSBEUiBHQVJDSUEgTU9SRU5PMBkGCisGAQQBgqg7AwgECxMJMDQyODUwMjYwMBkGCisGAQQB
+gqg7AwkECxMJR3VheWFxdWlsMBcGCisGAQQBgqg7AwwECRMHRUNVQURPUjAgBgorBgEEAYKoOwMz
+BBITEFNPRlRXQVJFLUFSQ0hJVk8wJwYDVR0RBCAwHoEcbmFyY2lzYS5zYWx0b3NAY2FoZ3llLmVk
+dS5lYzCCAd8GA1UdHwSCAdYwggHSMIIBzqCCAcqgggHGhoHVbGRhcDovL2JjZXFsZGFwc3VicDEu
+YmNlLmVjL2NuPUNSTDQ5NCxjbj1BQyUyMEJBTkNPJTIwQ0VOVFJBTCUyMERFTCUyMEVDVUFET1Is
+bD1RVUlUTyxvdT1FTlRJREFEJTIwREUlMjBDRVJUSUZJQ0FDSU9OJTIwREUlMjBJTkZPUk1BQ0lP
+Ti1FQ0lCQ0Usbz1CQU5DTyUyMENFTlRSQUwlMjBERUwlMjBFQ1VBRE9SLGM9RUM/Y2VydGlmaWNh
+dGVSZXZvY2F0aW9uTGlzdD9iYXNlhjRodHRwOi8vd3d3LmVjaS5iY2UuZWMvQ1JML2VjaV9iY2Vf
+ZWNfY3JsZmlsZWNvbWIuY3JspIG1MIGyMQswCQYDVQQGEwJFQzEiMCAGA1UEChMZQkFOQ08gQ0VO
+VFJBTCBERUwgRUNVQURPUjE3MDUGA1UECxMuRU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIERFIElO
+Rk9STUFDSU9OLUVDSUJDRTEOMAwGA1UEBxMFUVVJVE8xJTAjBgNVBAMTHEFDIEJBTkNPIENFTlRS
+QUwgREVMIEVDVUFET1IxDzANBgNVBAMTBkNSTDQ5NDAfBgNVHSMEGDAWgBQY+fD75jIcmWY5KsqL
+sml9SSe/zjAdBgNVHQ4EFgQUTToEZXFtbMvyYHBW9Oa/Tc/shO0wCQYDVR0TBAIwADAZBgkqhkiG
+9n0HQQAEDDAKGwRWOC4xAwIEsDANBgkqhkiG9w0BAQsFAAOCAgEAnXzaXm4Sjk+1XTZSl2j68Pvf
+n0XQu9K8+bgavs3iVKRrPwg4iFBdEKwmR/rdZM6ho5LXbHj1dJl7Ygy7Jgv54etC8DU7dcCZfmBO
+VM6GTL9qe9ter63Em5+MYkmJ6aGMemEoHBKH18T8cedgJKUDYCq5RLFXv6/gNX0n3rFf8ybaPW/G
+Ii9TMha1LOHDsFA2VFv8wLwcHmhYe7gQovBe61DH7GHX6Z8lFvGREZTMZy5MQcPPAmQR6Wxl3c7n
+7ki5CFF4WAffQRrkOM62doaTAHbRTM0aD8jcrIlTa+VfsvEQiKtoNNToqVG0hDeDZxteUBrRhmL2
+6lK5CipOFGYjPq8bPtJF5Sm3+OtZjbhu2QtFNK6cHGCPcz76eaJHnecXkv9Y5AxEMEHaq3+wtBH0
+tsZ9qouW5JGmCRozry0QzeyqRQtdpK4o43h7r8t2MfShp18lwnMtWiyueAGVfcD8ZXr1anUYtt2z
+5oDLwEbosUNAFHxSzABXOzS12YTimbiYE8ZKiIKvbouDQF1gnEhZqxRuOb0WgVApW5+8LRfkSBYn
+6PM/Tsfwkqm6HD5jo2m1S0fXk6d5zHTfqP2CSO9aUI7ZGioc53uCIwdJKf15g2Fd0gJyaty32orY
++dVH66dGyE/g3qnRRiZbUI1Sjm8uhYEKu9uif0FCzrp52ABQ174=
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+6T0xEHwhSL/hHiOZ4pvaGcA6szrhCh/RWKhPCXqa0Dkh97iPyKpHC+2rpE3ikj2EXDnmGu1o+UZH
+01s02DiP0k6tnwWn7ComH3Do7T45J8QIJJTZt3HkJ/YqoYLZwhknoRsEc62vwk4q6LMEnhJlIz1H
+YAXoH31e5WEXakp6CrjeHucd1/XodI8b79GbeFn4PFKGKwRXnYhSwlvHd43XaKWf/3QNtEHPTZHN
+myrIdiwiKZfMRmsFHUZzDpRhKZfdyUagZHmhWNiy4pDa+g/06FigorA04vg+CmvkmuDH7+eK5CVS
+4bm4krxcqePK3BetCZ0Ntmk75SvEvA/HEFaOtQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature625387-Object146553"><etsi:QualifyingProperties Target="#Signature625387"><etsi:SignedProperties Id="Signature625387-SignedProperties781046"><etsi:SignedSignatureProperties><etsi:SigningTime>2018-01-15T17:25:09-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></ds:DigestMethod><ds:DigestValue>aGOkQnghMZNgRf4gMsbcMwaHLb0RjJC01RHy9zCkZzE=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1484758513</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-601061"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

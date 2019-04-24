@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f82ee448dc8f488f964d3f8f0cc2c6ae" Name="Diagrama1">
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel_Mail_Efirm.mail_Mensaje_Archi_Adjunto" Width="1.5" PointX="5.125" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel_Mail_Efirm.mail_Mensaje_Tipo" Width="1.5" PointX="0.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel_Mail_Efirm.mail_Mensaje" Width="1.5" PointX="8.4862859940558142" PointY="29.1484000669552" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel_Mail_Efirm.tb_Contribuyente" Width="1.5" PointX="6.6098596670710759" PointY="29.947246550557782" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel_Mail_Efirm.FK_mail_Mensaje_Archi_Adjunto_mail_Mensaje" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel_Mail_Efirm.FK_mail_Mensaje_mail_Mensaje_Tipo" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel_Mail_Efirm.FK_mail_Mensaje_tb_Contribuyente" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel_Mail_Efirm.tb_Empresa" Width="1.5" PointX="4.8609167006150429" PointY="25.361137506254547" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

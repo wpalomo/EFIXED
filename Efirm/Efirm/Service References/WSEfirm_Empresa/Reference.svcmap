@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0711cc13-bfd1-499c-a55e-1e5cc8717d81" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1601/Ws_Empresa.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Ws_Empresa.disco" MetadataType="Disco" ID="8beca7ca-2b3b-4e01-972c-1c10f7c2c354" SourceId="1" SourceUrl="http://localhost:1601/Ws_Empresa.svc?disco" />
+    <MetadataFile FileName="Ws_Empresa.xsd" MetadataType="Schema" ID="e3433935-d7b7-47aa-9097-80e72255faed" SourceId="1" SourceUrl="http://localhost:1601/Ws_Empresa.svc?xsd=xsd2" />
+    <MetadataFile FileName="Ws_Empresa1.xsd" MetadataType="Schema" ID="fd2dfddd-3241-4b89-8be7-c187450d1715" SourceId="1" SourceUrl="http://localhost:1601/Ws_Empresa.svc?xsd=xsd0" />
+    <MetadataFile FileName="Ws_Empresa2.xsd" MetadataType="Schema" ID="bf713462-70c9-42ff-8722-15fb9f854fda" SourceId="1" SourceUrl="http://localhost:1601/Ws_Empresa.svc?xsd=xsd1" />
+    <MetadataFile FileName="Ws_Empresa.wsdl" MetadataType="Wsdl" ID="7dfe245b-2a43-41f0-8ce8-cd6df4e2dd68" SourceId="1" SourceUrl="http://localhost:1601/Ws_Empresa.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

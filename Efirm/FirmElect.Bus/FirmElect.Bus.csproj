@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE0D2EBE-1FA9-451A-8C8E-6B1B72094BB1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FirmElect.Bus</RootNamespace>
+    <AssemblyName>FirmElect.Bus</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.CodeParser.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Reports.Web.Design.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Reports.v12.1.Designer, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Controls.v12.1.Design, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v12.1.Design, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1.Design, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1.Extensions, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v12.1.Design, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1.Extensions, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EASendMail45">
+      <HintPath>..\FirmElect.Recursos\dll\EASendMail45.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cl_parametrosGenerales_Bus.cs" />
+    <Compile Include="comprobanteRetencion_Bus.cs" />
+    <Compile Include="fx_NotaDebito_Bus.cs" />
+    <Compile Include="factura_Bus.cs" />
+    <Compile Include="Firma_Bus.cs" />
+    <Compile Include="fx_Comprobantes_generados_Bus.cs" />
+    <Compile Include="fx_Factura_Bus.cs" />
+    <Compile Include="fx_funciones_files_Bus.cs" />
+    <Compile Include="fx_horario_Bus.cs" />
+    <Compile Include="fx_NotaCredito_Bus.cs" />
+    <Compile Include="fx_Retencion_Bus.cs" />
+    <Compile Include="fx_GuiaRemision_Bus.cs" />
+    <Compile Include="mail_Catalogo_Bus.cs" />
+    <Compile Include="mail_Cuentas_Correo_Bus.cs" />
+    <Compile Include="mail_Cuentas_Correo_x_Empresa_Bus.cs" />
+    <Compile Include="mail_Mensaje_Archi_Adjunto_Bus.cs" />
+    <Compile Include="mail_Mensaje_Bus.cs" />
+    <Compile Include="mail_Parametro_Bus.cs" />
+    <Compile Include="notaCredito_Bus.cs" />
+    <Compile Include="notaDebito_Bus.cs" />
+    <Compile Include="seg_menu_bus.cs" />
+    <Compile Include="seg_menu_x_tb_empresa_bus.cs" />
+    <Compile Include="seg_menu_x_tb_empresa_x_seg_usuario_bus.cs" />
+    <Compile Include="seg_usuario_bus.cs" />
+    <Compile Include="seg_usuario_x_tbl_empresa_bus.cs" />
+    <Compile Include="Service References\Java\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="tb_comprobante_x_valor_Bus.cs" />
+    <Compile Include="tb_FormaPago_Bus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="sp_consulta_x_cbtes_x_paginas_Bus.cs" />
+    <Compile Include="tb_Actividades_Horario_Acciones_Bus.cs" />
+    <Compile Include="tb_Actividades_Horario_Bus.cs" />
+    <Compile Include="tb_Actividades_Horario_Tipo_Ejecucion_Bus.cs" />
+    <Compile Include="tb_Actividades_Horario_Tipo_Tiempo_Bus.cs" />
+    <Compile Include="tb_Catalogo_Bus.cs" />
+    <Compile Include="tb_Clave_Conting_Bus.cs" />
+    <Compile Include="tb_Cliente_Bus.cs" />
+    <Compile Include="tb_Comprobante_Bus.cs" />
+    <Compile Include="tb_comprobante_exportado_base_ext_Bus.cs" />
+    <Compile Include="tb_Comprobante_Hist_Eliminado_Bus.cs" />
+    <Compile Include="tb_Comprobante_Procesos_externos_Bus.cs" />
+    <Compile Include="tb_Comprobante_tipo_Bus.cs" />
+    <Compile Include="tb_Comprobante_tipo_x_empresa_Bus.cs" />
+    <Compile Include="tb_Contribuyente_Bus.cs" />
+    <Compile Include="tb_directorio_Bus.cs" />
+    <Compile Include="tb_Empresa_Bus.cs" />
+    <Compile Include="tb_Empresa_externa_Bus.cs" />
+    <Compile Include="tb_Parametro_Bus.cs" />
+    <Compile Include="tb_sis_Log_Error_Vzen_Bus.cs" />
+    <Compile Include="tb_Tocken_Bus.cs" />
+    <Compile Include="tb_tocken_x_usuario_tocken_Bus.cs" />
+    <Compile Include="tb_usuario_Bus.cs" />
+    <Compile Include="tb_Usuario_Tocken_Bus.cs" />
+    <Compile Include="vw_Comprobantes_recibidos_Bus.cs" />
+    <Compile Include="vw_mail_Cuentas_Correo_x_mail_Mensaje_Tipo_Bus.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FirmElect.Data\FirmElect.Data.csproj">
+      <Project>{8b7a25bb-77a7-4972-902d-50d8e0f8271c}</Project>
+      <Name>FirmElect.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FirmElect.Info\FirmElect.Info.csproj">
+      <Project>{a739beee-cd06-4647-84a4-8e76bed4a54a}</Project>
+      <Name>FirmElect.Info</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FirmElect.Reports\FirmElect.Reports.csproj">
+      <Project>{6892bbcc-3807-4c3f-b815-b279ff7cb172}</Project>
+      <Name>FirmElect.Reports</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Fakes Include="Fakes\EASendMailSvcAgent40.fakes" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Java\Cal.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Java\EFirmService.wsdl" />
+    <None Include="Service References\Java\FirmElect.Bus.Java.FirmarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Java\FirmElect.Bus.Java.GetAutorizacionWSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Java\FirmElect.Bus.Java.GetDatosUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Java\FirmElect.Bus.Java.GetTiposAutentificacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Java\FirmElect.Bus.Java.GetTokensResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Java\FirmElect.Bus.Java.LoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Java\FirmElect.Bus.Java.SetParametroAmbienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Java\FirmElect.Bus.Java.SetParametroProxyPassResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Java\FirmElect.Bus.Java.SetParametroProxyPortResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Java\FirmElect.Bus.Java.SetParametroProxyUrlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Java\FirmElect.Bus.Java.SetParametroProxyUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Java\FirmElect.Bus.Java.SetParametroUrlWSAutorizacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Java\FirmElect.Bus.Java.SetParametroUrlWSRecepcionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Java\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Java\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Java\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Java\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guiaRemision id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>CAMARONERA RIO NILO S.A. RIONILSA</razonSocial>
+    <nombreComercial>RIONILSA</nombreComercial>
+    <ruc>0992801778001</ruc>
+    <claveAcceso>1902201806099280177800120010010000015451234567811</claveAcceso>
+    <codDoc>06</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000001545</secuencial>
+    <dirMatriz>COLOMBIA 101 Y LA RIA</dirMatriz>
+  </infoTributaria>
+  <infoGuiaRemision>
+    <dirEstablecimiento>Colombia 101 y La Ria</dirEstablecimiento>
+    <dirPartida>Colombia 101 y La Ria</dirPartida>
+    <razonSocialTransportista>Patricio Choez Penaherrera</razonSocialTransportista>
+    <tipoIdentificacionTransportista>05</tipoIdentificacionTransportista>
+    <rucTransportista>0917606733</rucTransportista>
+    <fechaIniTransporte>19/02/2018</fechaIniTransporte>
+    <fechaFinTransporte>19/02/2018</fechaFinTransporte>
+    <placa>GOL-453</placa>
+  </infoGuiaRemision>
+  <destinatarios>
+    <destinatario>
+      <identificacionDestinatario>0992801778001</identificacionDestinatario>
+      <razonSocialDestinatario>CAMARONERA RIO NILO S.A. RIONILSA</razonSocialDestinatario>
+      <dirDestinatario>COLOMBIA 101 Y LA RIA</dirDestinatario>
+      <motivoTraslado>TRASLADO ENTRE ESTABLECIMIENTOS DE LA MISMA EMPRESA</motivoTraslado>
+      <detalles>
+        <detalle>
+          <codigoInterno>1930</codigoInterno>
+          <codigoAdicional>1930</codigoAdicional>
+          <descripcion>Tablon de 20 x 4 cmts x 5 mtsc.c. Pedido 374 Aut. Sr. RST 06-02-18(OC#2175)</descripcion>
+          <cantidad>28</cantidad>
+        </detalle>
+      </detalles>
+    </destinatario>
+  </destinatarios>
+  <infoAdicional>
+    <campoAdicional nombre="DESTINO">.                                                 </campoAdicional>
+  </infoAdicional>
+</guiaRemision>

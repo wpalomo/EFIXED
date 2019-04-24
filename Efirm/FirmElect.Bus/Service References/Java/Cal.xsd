@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://WS.firmaelectronica/" targetNamespace="http://WS.firmaelectronica/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Firmar" type="tns:Firmar" />
+  <xs:element name="FirmarResponse" type="tns:FirmarResponse" />
+  <xs:element name="GetAutorizacionWS" type="tns:GetAutorizacionWS" />
+  <xs:element name="GetAutorizacionWSResponse" type="tns:GetAutorizacionWSResponse" />
+  <xs:element name="GetDatosUsuario" type="tns:GetDatosUsuario" />
+  <xs:element name="GetDatosUsuarioResponse" type="tns:GetDatosUsuarioResponse" />
+  <xs:element name="GetTiposAutentificacion" type="tns:GetTiposAutentificacion" />
+  <xs:element name="GetTiposAutentificacionResponse" type="tns:GetTiposAutentificacionResponse" />
+  <xs:element name="GetTokens" type="tns:GetTokens" />
+  <xs:element name="GetTokensResponse" type="tns:GetTokensResponse" />
+  <xs:element name="Login" type="tns:Login" />
+  <xs:element name="LoginResponse" type="tns:LoginResponse" />
+  <xs:element name="SetParametroAmbiente" type="tns:SetParametroAmbiente" />
+  <xs:element name="SetParametroAmbienteResponse" type="tns:SetParametroAmbienteResponse" />
+  <xs:element name="SetParametroProxyPass" type="tns:SetParametroProxyPass" />
+  <xs:element name="SetParametroProxyPassResponse" type="tns:SetParametroProxyPassResponse" />
+  <xs:element name="SetParametroProxyPort" type="tns:SetParametroProxyPort" />
+  <xs:element name="SetParametroProxyPortResponse" type="tns:SetParametroProxyPortResponse" />
+  <xs:element name="SetParametroProxyUrl" type="tns:SetParametroProxyUrl" />
+  <xs:element name="SetParametroProxyUrlResponse" type="tns:SetParametroProxyUrlResponse" />
+  <xs:element name="SetParametroProxyUser" type="tns:SetParametroProxyUser" />
+  <xs:element name="SetParametroProxyUserResponse" type="tns:SetParametroProxyUserResponse" />
+  <xs:element name="SetParametroUrlWSAutorizacion" type="tns:SetParametroUrlWSAutorizacion" />
+  <xs:element name="SetParametroUrlWSAutorizacionResponse" type="tns:SetParametroUrlWSAutorizacionResponse" />
+  <xs:element name="SetParametroUrlWSRecepcion" type="tns:SetParametroUrlWSRecepcion" />
+  <xs:element name="SetParametroUrlWSRecepcionResponse" type="tns:SetParametroUrlWSRecepcionResponse" />
+  <xs:complexType name="Firmar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FirmarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SetParametroUrlWSRecepcion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SetParametroUrlWSRecepcionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SetParametroProxyUrl">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SetParametroProxyUrlResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetTokens">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetTokensResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SetParametroProxyPass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SetParametroProxyPassResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SetParametroUrlWSAutorizacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SetParametroUrlWSAutorizacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SetParametroProxyUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SetParametroProxyUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetDatosUsuario">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetDatosUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SetParametroAmbiente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SetParametroAmbienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Login">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element minOccurs="0" name="arg2" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LoginResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetTiposAutentificacion">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetTiposAutentificacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetAutorizacionWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetAutorizacionWSResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SetParametroProxyPort">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SetParametroProxyPortResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

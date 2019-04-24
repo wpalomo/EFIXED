@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6892BBCC-3807-4C3F-B815-B279FF7CB172}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FirmElect.Reports</RootNamespace>
+    <AssemblyName>FirmElect.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IRpt_Ride_CbteRetencion.cs" />
+    <Compile Include="IRpt_Ride_Factura.cs" />
+    <Compile Include="IRpt_Ride_Guia_Remis.cs" />
+    <Compile Include="IRpt_Ride_NotaCred.cs" />
+    <Compile Include="IRpt_Ride_NotaDeb.cs" />
+    <Compile Include="Rpt_Ride_bus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rpt_Ride_EDE_Factura.cs" />
+    <Compile Include="Rpt_Ride_EDE_Guia_Remis.cs" />
+    <Compile Include="Rpt_Ride_EDE_NotaCred.cs" />
+    <Compile Include="Rpt_Ride_EDE_Retencion.cs" />
+    <Compile Include="Rpt_Ride_ERROR_Factura.cs" />
+    <Compile Include="Rpt_Ride_ERROR_Guia_Remis.cs" />
+    <Compile Include="Rpt_Ride_ERROR_NotaCred.cs" />
+    <Compile Include="Rpt_Ride_ERROR_NotaDeb.cs" />
+    <Compile Include="Rpt_Ride_ERROR_Retencion.cs" />
+    <Compile Include="Rpt_Ride_FIS_Factura.cs" />
+    <Compile Include="Rpt_Ride_FIS_Guia_Remis.cs" />
+    <Compile Include="Rpt_Ride_FIS_NotaCred.cs" />
+    <Compile Include="Rpt_Ride_FIS_NotaDeb.cs" />
+    <Compile Include="Rpt_Ride_FIS_Retencion.cs" />
+    <Compile Include="Rpt_Ride_GEN_Factura.cs" />
+    <Compile Include="Rpt_Ride_GEN_Guia_Remis.cs" />
+    <Compile Include="Rpt_Ride_GEN_NotaCred.cs" />
+    <Compile Include="Rpt_Ride_GEN_NotaDeb.cs" />
+    <Compile Include="Rpt_Ride_NATU_Factura.cs" />
+    <Compile Include="Rpt_Ride_NATU_Guia_Remis.cs" />
+    <Compile Include="Rpt_Ride_NATU_NotaCred.cs" />
+    <Compile Include="Rpt_Ride_NATU_NotaDeb.cs" />
+    <Compile Include="Rpt_Ride_NATU_Retencion.cs" />
+    <Compile Include="Rpt_Ride_OMD_Factura.cs" />
+    <Compile Include="Rpt_Ride_OMD_Guia_Remis.cs" />
+    <Compile Include="Rpt_Ride_OMD_NotaCred.cs" />
+    <Compile Include="Rpt_Ride_OMD_NotaDeb.cs" />
+    <Compile Include="Rpt_Ride_OMD_Retencion.cs" />
+    <Compile Include="Rpt_Ride_GEN_Retencion.cs" />
+    <Compile Include="Rpt_Ride_TAL_Factura.cs" />
+    <Compile Include="xRpt_Ride_ERROR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_ERROR.Designer.cs">
+      <DependentUpon>xRpt_Ride_ERROR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_Factura_Ede.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_Factura_Ede.Designer.cs">
+      <DependentUpon>xRpt_Ride_Factura_Ede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_Factura_Ede_DatosAdicionales.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_Factura_Ede_DatosAdicionales.Designer.cs">
+      <DependentUpon>xRpt_Ride_Factura_Ede_DatosAdicionales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_Factura_Fis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_Factura_Fis.Designer.cs">
+      <DependentUpon>xRpt_Ride_Factura_Fis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_Factura_Gen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_Factura_Gen.Designer.cs">
+      <DependentUpon>xRpt_Ride_Factura_Gen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_Factura_Gen_DatosAdicionales.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_Factura_Gen_DatosAdicionales.Designer.cs">
+      <DependentUpon>xRpt_Ride_Factura_Gen_DatosAdicionales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_Factura_Gen_Forma_Pago.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_Factura_Gen_Forma_Pago.Designer.cs">
+      <DependentUpon>xRpt_Ride_Factura_Gen_Forma_Pago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_Factura_Natu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_Factura_Natu.Designer.cs">
+      <DependentUpon>xRpt_Ride_Factura_Natu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_GuiaRemision_Ede.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_GuiaRemision_Ede.Designer.cs">
+      <DependentUpon>xRpt_Ride_GuiaRemision_Ede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_GuiaRemision_Gen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_GuiaRemision_Gen.Designer.cs">
+      <DependentUpon>xRpt_Ride_GuiaRemision_Gen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_NotaCred_Ede.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_NotaCred_Ede.Designer.cs">
+      <DependentUpon>xRpt_Ride_NotaCred_Ede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_NotaCred_Fis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_NotaCred_Fis.Designer.cs">
+      <DependentUpon>xRpt_Ride_NotaCred_Fis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_NotaCred_Gen_DatosAdicionales.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_NotaCred_Gen_DatosAdicionales.Designer.cs">
+      <DependentUpon>xRpt_Ride_NotaCred_Gen_DatosAdicionales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_NotaCred_Gen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_NotaCred_Gen.Designer.cs">
+      <DependentUpon>xRpt_Ride_NotaCred_Gen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_NotaDebito_Gen_DatosAdicionales.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_NotaDebito_Gen_DatosAdicionales.Designer.cs">
+      <DependentUpon>xRpt_Ride_NotaDebito_Gen_DatosAdicionales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_NotaDebito_Gen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_NotaDebito_Gen.Designer.cs">
+      <DependentUpon>xRpt_Ride_NotaDebito_Gen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_Retencion_Ede.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_Retencion_Ede.Designer.cs">
+      <DependentUpon>xRpt_Ride_Retencion_Ede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_Retencion_Gen_DatosAdicionales.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_Retencion_Gen_DatosAdicionales.Designer.cs">
+      <DependentUpon>xRpt_Ride_Retencion_Gen_DatosAdicionales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xRpt_Ride_Retencion_Gen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xRpt_Ride_Retencion_Gen.Designer.cs">
+      <DependentUpon>xRpt_Ride_Retencion_Gen.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FirmElect.Data\FirmElect.Data.csproj">
+      <Project>{8b7a25bb-77a7-4972-902d-50d8e0f8271c}</Project>
+      <Name>FirmElect.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FirmElect.Info\FirmElect.Info.csproj">
+      <Project>{a739beee-cd06-4647-84a4-8e76bed4a54a}</Project>
+      <Name>FirmElect.Info</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="xRpt_Ride_ERROR.resx">
+      <DependentUpon>xRpt_Ride_ERROR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_Factura_Ede.resx">
+      <DependentUpon>xRpt_Ride_Factura_Ede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_Factura_Ede_DatosAdicionales.resx">
+      <DependentUpon>xRpt_Ride_Factura_Ede_DatosAdicionales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_Factura_Fis.resx">
+      <DependentUpon>xRpt_Ride_Factura_Fis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_Factura_Gen.resx">
+      <DependentUpon>xRpt_Ride_Factura_Gen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_Factura_Gen_DatosAdicionales.resx">
+      <DependentUpon>xRpt_Ride_Factura_Gen_DatosAdicionales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_Factura_Gen_Forma_Pago.resx">
+      <DependentUpon>xRpt_Ride_Factura_Gen_Forma_Pago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_Factura_Natu.resx">
+      <DependentUpon>xRpt_Ride_Factura_Natu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_GuiaRemision_Ede.resx">
+      <DependentUpon>xRpt_Ride_GuiaRemision_Ede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_GuiaRemision_Gen.resx">
+      <DependentUpon>xRpt_Ride_GuiaRemision_Gen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_NotaCred_Ede.resx">
+      <DependentUpon>xRpt_Ride_NotaCred_Ede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_NotaCred_Fis.resx">
+      <DependentUpon>xRpt_Ride_NotaCred_Fis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_NotaCred_Gen_DatosAdicionales.resx">
+      <DependentUpon>xRpt_Ride_NotaCred_Gen_DatosAdicionales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_NotaCred_Gen.resx">
+      <DependentUpon>xRpt_Ride_NotaCred_Gen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_NotaDebito_Gen_DatosAdicionales.resx">
+      <DependentUpon>xRpt_Ride_NotaDebito_Gen_DatosAdicionales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_NotaDebito_Gen.resx">
+      <DependentUpon>xRpt_Ride_NotaDebito_Gen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_Retencion_Ede.resx">
+      <DependentUpon>xRpt_Ride_Retencion_Ede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_Retencion_Gen_DatosAdicionales.resx">
+      <DependentUpon>xRpt_Ride_Retencion_Gen_DatosAdicionales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xRpt_Ride_Retencion_Gen.resx">
+      <DependentUpon>xRpt_Ride_Retencion_Gen.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.Factura.factura.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.Factura.facturaCampoAdicional.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.Factura.facturaDetalle.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.Factura.facturaDetalleDetAdicional.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.Factura.facturaInfoFactura.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.Factura.facturaInfoFacturaTotalImpuesto.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.Factura.factura_Ride_Info.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.Factura.impuesto.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.Factura.infoTributaria.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.Factura_V2.factura_Ride_Info.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.Factura_V2.pagosPago.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.Factura_V2.pagosPago_info.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.GuiaRemision.guiaRemision_Ride_Info.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.NotaCredito.notaCredito.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.NotaCredito.notaCreditoCampoAdicional.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.NotaCredito.notaCreditoDetalle.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.NotaCredito.notaCreditoDetalleDetAdicional.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.NotaCredito.notaCreditoInfoNotaCredito.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.NotaCredito.notaCredito_Ride_Info.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.NotaCredito.totalConImpuestos.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.NotaCredito.totalConImpuestosTotalImpuesto.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.NotaDebito.notaDebito_Ride_Info.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.Retencion.comprobanteRetencion_Ride_Info.datasource" />
+    <None Include="Properties\DataSources\FirmElect.Info.class_sri.Retencion.impuesto.datasource" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

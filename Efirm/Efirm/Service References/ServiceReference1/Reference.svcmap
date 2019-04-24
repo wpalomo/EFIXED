@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="93877cfb-d454-4519-9ffe-b541ef05f89b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.16.131/FACTELEC/Ws_Comprobante.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Ws_Comprobante.xsd" MetadataType="Schema" ID="e9e0626b-5f5b-48ac-a23f-4c075f8eb24d" SourceId="1" SourceUrl="http://192.168.16.131/FACTELEC/Ws_Comprobante.svc?xsd=xsd0" />
+    <MetadataFile FileName="Ws_Comprobante1.xsd" MetadataType="Schema" ID="d05fa42b-e77b-46d8-8093-4f3b8d1d5db8" SourceId="1" SourceUrl="http://192.168.16.131/FACTELEC/Ws_Comprobante.svc?xsd=xsd2" />
+    <MetadataFile FileName="Ws_Comprobante.wsdl" MetadataType="Wsdl" ID="1bd556ce-2d87-4e10-aa11-f79d48613faa" SourceId="1" SourceUrl="http://192.168.16.131/FACTELEC/Ws_Comprobante.svc?wsdl" />
+    <MetadataFile FileName="Ws_Comprobante2.xsd" MetadataType="Schema" ID="b2f3f7d4-0feb-40de-87a1-d991a60a6ee1" SourceId="1" SourceUrl="http://192.168.16.131/FACTELEC/Ws_Comprobante.svc?xsd=xsd1" />
+    <MetadataFile FileName="Ws_Comprobante.disco" MetadataType="Disco" ID="697584c2-6366-45e2-9493-19e4f6a3a990" SourceId="1" SourceUrl="http://192.168.16.131/FACTELEC/Ws_Comprobante.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

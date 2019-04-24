@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="campo_adicional_pedido.Expression" xml:space="preserve">
+    <value>IIF( [campoAdicional01.nombre]  ==  'Pedido' , [campoAdicional01.valor],
+    IIF( [campoAdicional02.nombre] == 'Pedido' , [campoAdicional02.valor],
+        IIF( [campoAdicional03.nombre] == 'Pedido' , [campoAdicional03.valor],
+            IIF( [campoAdicional04.nombre] == 'Pedido' , [campoAdicional04.valor],
+                IIF( [campoAdicional05.nombre] == 'Pedido' , [campoAdicional05.valor],
+                    IIF( [campoAdicional06.nombre] == 'Pedido' , [campoAdicional06.valor],
+                        IIF( [campoAdicional07.nombre] == 'Pedido' , [campoAdicional07.valor],
+                            IIF( [campoAdicional08.nombre] == 'Pedido' , [campoAdicional08.valor],
+                                IIF( [campoAdicional09.nombre] == 'Pedido' , [campoAdicional09.valor],
+                                    IIF( [campoAdicional10.nombre] == 'Pedido' , [campoAdicional10.valor],
+                                        IIF( [campoAdicional11.nombre] == 'Pedido' , [campoAdicional11.valor],
+                                            IIF( [campoAdicional12.nombre] == 'Pedido' , [campoAdicional12.valor],
+                                                IIF( [campoAdicional13.nombre] == 'Pedido' , [campoAdicional13.valor],
+                                                    IIF( [campoAdicional14.nombre] == 'Pedido' , [campoAdicional14.valor],
+                                                        IIF( [campoAdicional15.nombre] == 'Pedido' , [campoAdicional15.valor], '')))))))))))))))</value>
+  </data>
+  <data name="campo_adicional_orden_despacho.Expression" xml:space="preserve">
+    <value>IIF( [campoAdicional01.nombre]  ==  'OrdenDespacho' , [campoAdicional01.valor],
+    IIF( [campoAdicional02.nombre] == 'OrdenDespacho' , [campoAdicional02.valor],
+        IIF( [campoAdicional03.nombre] == 'OrdenDespacho' , [campoAdicional03.valor],
+            IIF( [campoAdicional04.nombre] == 'OrdenDespacho' , [campoAdicional04.valor],
+                IIF( [campoAdicional05.nombre] == 'OrdenDespacho' , [campoAdicional05.valor],
+                    IIF( [campoAdicional06.nombre] == 'OrdenDespacho' , [campoAdicional06.valor],
+                        IIF( [campoAdicional07.nombre] == 'OrdenDespacho' , [campoAdicional07.valor],
+                            IIF( [campoAdicional08.nombre] == 'OrdenDespacho' , [campoAdicional08.valor],
+                                IIF( [campoAdicional09.nombre] == 'OrdenDespacho' , [campoAdicional09.valor],
+                                    IIF( [campoAdicional10.nombre] == 'OrdenDespacho' , [campoAdicional10.valor],
+                                        IIF( [campoAdicional11.nombre] == 'OrdenDespacho' , [campoAdicional11.valor],
+                                            IIF( [campoAdicional12.nombre] == 'OrdenDespacho' , [campoAdicional12.valor],
+                                                IIF( [campoAdicional13.nombre] == 'OrdenDespacho' , [campoAdicional13.valor],
+                                                    IIF( [campoAdicional14.nombre] == 'OrdenDespacho' , [campoAdicional14.valor],
+                                                        IIF( [campoAdicional15.nombre] == 'OrdenDespacho' , [campoAdicional15.valor], '')))))))))))))))</value>
+  </data>
+  <data name="campo_adicional_fecha_vencimiento.Expression" xml:space="preserve">
+    <value>IIF( [campoAdicional01.nombre] ==  'FechaVencimiento' , [campoAdicional01.valor],
+    IIF( [campoAdicional02.nombre] == 'FechaVencimiento' , [campoAdicional02.valor],
+        IIF( [campoAdicional03.nombre] == 'FechaVencimiento' , [campoAdicional03.valor],
+            IIF( [campoAdicional04.nombre] == 'FechaVencimiento' , [campoAdicional04.valor],
+                IIF( [campoAdicional05.nombre] == 'FechaVencimiento' , [campoAdicional05.valor],
+                    IIF( [campoAdicional06.nombre] == 'FechaVencimiento' , [campoAdicional06.valor],
+                        IIF( [campoAdicional07.nombre] == 'FechaVencimiento' , [campoAdicional07.valor],
+                            IIF( [campoAdicional08.nombre] == 'FechaVencimiento' , [campoAdicional08.valor],
+                                IIF( [campoAdicional09.nombre] == 'FechaVencimiento' , [campoAdicional09.valor],
+                                    IIF( [campoAdicional10.nombre] == 'FechaVencimiento' , [campoAdicional10.valor],
+                                        IIF( [campoAdicional11.nombre] == 'FechaVencimiento' , [campoAdicional11.valor],
+                                            IIF( [campoAdicional12.nombre] == 'FechaVencimiento' , [campoAdicional12.valor],
+                                                IIF( [campoAdicional13.nombre] == 'FechaVencimiento' , [campoAdicional13.valor],
+                                                    IIF( [campoAdicional14.nombre] == 'FechaVencimiento' , [campoAdicional14.valor],
+                                                        IIF( [campoAdicional15.nombre] == 'FechaVencimiento' , [campoAdicional15.valor], '')))))))))))))))</value>
+  </data>
+  <data name="campo_adicional_forma_pago.Expression" xml:space="preserve">
+    <value>IIF( [campoAdicional01.nombre] ==  'FormaPago' , [campoAdicional01.valor],
+    IIF( [campoAdicional02.nombre] == 'FormaPago' , [campoAdicional02.valor],
+        IIF( [campoAdicional03.nombre] == 'FormaPago' , [campoAdicional03.valor],
+            IIF( [campoAdicional04.nombre] == 'FormaPago' , [campoAdicional04.valor],
+                IIF( [campoAdicional05.nombre] == 'FormaPago' , [campoAdicional05.valor],
+                    IIF( [campoAdicional06.nombre] == 'FormaPago' , [campoAdicional06.valor],
+                        IIF( [campoAdicional07.nombre] == 'FormaPago' , [campoAdicional07.valor],
+                            IIF( [campoAdicional08.nombre] == 'FormaPago' , [campoAdicional08.valor],
+                                IIF( [campoAdicional09.nombre] == 'FormaPago' , [campoAdicional09.valor],
+                                    IIF( [campoAdicional10.nombre] == 'FormaPago' , [campoAdicional10.valor],
+                                        IIF( [campoAdicional11.nombre] == 'FormaPago' , [campoAdicional11.valor],
+                                            IIF( [campoAdicional12.nombre] == 'FormaPago' , [campoAdicional12.valor],
+                                                IIF( [campoAdicional13.nombre] == 'FormaPago' , [campoAdicional13.valor],
+                                                    IIF( [campoAdicional14.nombre] == 'FormaPago' , [campoAdicional14.valor],
+                                                        IIF( [campoAdicional15.nombre] == 'FormaPago' , [campoAdicional15.valor], '')))))))))))))))</value>
+  </data>
+  <data name="campo_adicional_vendedor.Expression" xml:space="preserve">
+    <value>IIF( [campoAdicional01.nombre] ==  'Vendedor' , [campoAdicional01.valor],
+    IIF( [campoAdicional02.nombre] == 'Vendedor' , [campoAdicional02.valor],
+        IIF( [campoAdicional03.nombre] == 'Vendedor' , [campoAdicional03.valor],
+            IIF( [campoAdicional04.nombre] == 'Vendedor' , [campoAdicional04.valor],
+                IIF( [campoAdicional05.nombre] == 'Vendedor' , [campoAdicional05.valor],
+                    IIF( [campoAdicional06.nombre] == 'Vendedor' , [campoAdicional06.valor],
+                        IIF( [campoAdicional07.nombre] == 'Vendedor' , [campoAdicional07.valor],
+                            IIF( [campoAdicional08.nombre] == 'Vendedor' , [campoAdicional08.valor],
+                                IIF( [campoAdicional09.nombre] == 'Vendedor' , [campoAdicional09.valor],
+                                    IIF( [campoAdicional10.nombre] == 'Vendedor' , [campoAdicional10.valor],
+                                        IIF( [campoAdicional11.nombre] == 'Vendedor' , [campoAdicional11.valor],
+                                            IIF( [campoAdicional12.nombre] == 'Vendedor' , [campoAdicional12.valor],
+                                                IIF( [campoAdicional13.nombre] == 'Vendedor' , [campoAdicional13.valor],
+                                                    IIF( [campoAdicional14.nombre] == 'Vendedor' , [campoAdicional14.valor],
+                                                        IIF( [campoAdicional15.nombre] == 'Vendedor' , [campoAdicional15.valor], '')))))))))))))))</value>
+  </data>
+  <data name="campo_adicional_unidad.Expression" xml:space="preserve">
+    <value>IIF( [campoAdicional01.nombre] ==  'Unidad' , [campoAdicional01.valor],
+    IIF( [campoAdicional02.nombre] == 'Unidad' , [campoAdicional02.valor],
+        IIF( [campoAdicional03.nombre] == 'Unidad' , [campoAdicional03.valor],
+            IIF( [campoAdicional04.nombre] == 'Unidad' , [campoAdicional04.valor],
+                IIF( [campoAdicional05.nombre] == 'Unidad' , [campoAdicional05.valor],
+                    IIF( [campoAdicional06.nombre] == 'Unidad' , [campoAdicional06.valor],
+                        IIF( [campoAdicional07.nombre] == 'Unidad' , [campoAdicional07.valor],
+                            IIF( [campoAdicional08.nombre] == 'Unidad' , [campoAdicional08.valor],
+                                IIF( [campoAdicional09.nombre] == 'Unidad' , [campoAdicional09.valor],
+                                    IIF( [campoAdicional10.nombre] == 'Unidad' , [campoAdicional10.valor],
+                                        IIF( [campoAdicional11.nombre] == 'Unidad' , [campoAdicional11.valor],
+                                            IIF( [campoAdicional12.nombre] == 'Unidad' , [campoAdicional12.valor],
+                                                IIF( [campoAdicional13.nombre] == 'Unidad' , [campoAdicional13.valor],
+                                                    IIF( [campoAdicional14.nombre] == 'Unidad' , [campoAdicional14.valor],
+                                                        IIF( [campoAdicional15.nombre] == 'Unidad' , [campoAdicional15.valor], '')))))))))))))))</value>
+  </data>
+  <data name="campo_adicional_mail.Expression" xml:space="preserve">
+    <value>IIF( [campoAdicional01.nombre] ==  'Mail' , [campoAdicional01.valor],
+    IIF( [campoAdicional02.nombre] == 'Mail' , [campoAdicional02.valor],
+        IIF( [campoAdicional03.nombre] == 'Mail' , [campoAdicional03.valor],
+            IIF( [campoAdicional04.nombre] == 'Mail' , [campoAdicional04.valor],
+                IIF( [campoAdicional05.nombre] == 'Mail' , [campoAdicional05.valor],
+                    IIF( [campoAdicional06.nombre] == 'Mail' , [campoAdicional06.valor],
+                        IIF( [campoAdicional07.nombre] == 'Mail' , [campoAdicional07.valor],
+                            IIF( [campoAdicional08.nombre] == 'Mail' , [campoAdicional08.valor],
+                                IIF( [campoAdicional09.nombre] == 'Mail' , [campoAdicional09.valor],
+                                    IIF( [campoAdicional10.nombre] == 'Mail' , [campoAdicional10.valor],
+                                        IIF( [campoAdicional11.nombre] == 'Mail' , [campoAdicional11.valor],
+                                            IIF( [campoAdicional12.nombre] == 'Mail' , [campoAdicional12.valor],
+                                                IIF( [campoAdicional13.nombre] == 'Mail' , [campoAdicional13.valor],
+                                                    IIF( [campoAdicional14.nombre] == 'Mail' , [campoAdicional14.valor],
+                                                        IIF( [campoAdicional15.nombre] == 'Mail' , [campoAdicional15.valor], '')))))))))))))))</value>
+  </data>
+  <data name="campo_adicional_referencia.Expression" xml:space="preserve">
+    <value>IIF( [campoAdicional01.nombre] ==  'Referencia' , [campoAdicional01.valor],
+    IIF( [campoAdicional02.nombre] == 'Referencia' , [campoAdicional02.valor],
+        IIF( [campoAdicional03.nombre] == 'Referencia' , [campoAdicional03.valor],
+            IIF( [campoAdicional04.nombre] == 'Referencia' , [campoAdicional04.valor],
+                IIF( [campoAdicional05.nombre] == 'Referencia' , [campoAdicional05.valor],
+                    IIF( [campoAdicional06.nombre] == 'Referencia' , [campoAdicional06.valor],
+                        IIF( [campoAdicional07.nombre] == 'Referencia' , [campoAdicional07.valor],
+                            IIF( [campoAdicional08.nombre] == 'Referencia' , [campoAdicional08.valor],
+                                IIF( [campoAdicional09.nombre] == 'Referencia' , [campoAdicional09.valor],
+                                    IIF( [campoAdicional10.nombre] == 'Referencia' , [campoAdicional10.valor],
+                                        IIF( [campoAdicional11.nombre] == 'Referencia' , [campoAdicional11.valor],
+                                            IIF( [campoAdicional12.nombre] == 'Referencia' , [campoAdicional12.valor],
+                                                IIF( [campoAdicional13.nombre] == 'Referencia' , [campoAdicional13.valor],
+                                                    IIF( [campoAdicional14.nombre] == 'Referencia' , [campoAdicional14.valor],
+                                                        IIF( [campoAdicional15.nombre] == 'Referencia' , [campoAdicional15.valor], '')))))))))))))))</value>
+  </data>
+  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>9, 6</value>
+  </metadata>
+</root>

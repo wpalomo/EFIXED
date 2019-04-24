@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DBFacturacion_Electronica</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{caac0737-0552-4975-9f2a-73e143e675f4}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DBFacturacion_Electronica</RootNamespace>
+    <AssemblyName>DBFacturacion_Electronica</AssemblyName>
+    <ModelCollation>3082,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Modern_Spanish_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\mail_Catalogo.sql" />
+    <Build Include="dbo\Tables\tb_Catalogo_tipo.sql" />
+    <Build Include="dbo\Tables\tb_Usuario_Tocken.sql" />
+    <Build Include="dbo\Tables\tb_Clave_Conting.sql" />
+    <Build Include="dbo\Tables\tb_Empresa_externa.sql" />
+    <Build Include="dbo\Tables\tb_comprobantes_No_Generados.sql" />
+    <Build Include="dbo\Tables\tb_Actividades_Horario_EloadEfirm.sql" />
+    <Build Include="dbo\Tables\tb_Tocken.sql" />
+    <Build Include="dbo\Tables\tb_directorio.sql" />
+    <Build Include="dbo\Tables\tb_Usuario.sql" />
+    <Build Include="dbo\Tables\tb_Empresa.sql" />
+    <Build Include="dbo\Tables\tb_Error_sri.sql" />
+    <Build Include="dbo\Tables\tb_comprobante_exportado_base_ext.sql" />
+    <Build Include="dbo\Tables\mail_plantilla_correo_x_cuenta.sql" />
+    <Build Include="dbo\Tables\mail_Mensaje_Tipo.sql" />
+    <Build Include="dbo\Tables\mail_Mensaje.sql" />
+    <Build Include="dbo\Tables\mail_Mensaje_Archi_Adjunto.sql" />
+    <Build Include="dbo\Tables\mail_Cuentas_Correo.sql" />
+    <Build Include="dbo\Tables\mail_Cuentas_Correo_x_Empresa.sql" />
+    <Build Include="dbo\Tables\tb_Comprobante_estado_proceso.sql" />
+    <Build Include="dbo\Tables\tb_Catalogo.sql" />
+    <Build Include="dbo\Tables\tb_Comprobante.sql" />
+    <Build Include="dbo\Tables\tb_Contribuyente.sql" />
+    <Build Include="dbo\Tables\tb_Sucursal.sql" />
+    <Build Include="dbo\Tables\tb_Parametro.sql" />
+    <Build Include="dbo\Tables\tb_Actividades_Horario_Tipo_Ejecucion.sql" />
+    <Build Include="dbo\Tables\tb_Actividades_Horario_Tipo_Tiempo.sql" />
+    <Build Include="dbo\Tables\tb_Comprobante_tipo.sql" />
+    <Build Include="dbo\Tables\tb_Comprobante_tipo_x_empresa.sql" />
+    <Build Include="dbo\Tables\tb_Actividades_Horario.sql" />
+    <Build Include="dbo\Tables\tb_Actividades_Horario_Acciones.sql" />
+    <Build Include="dbo\Tables\tb_directorio_tipo.sql" />
+    <Build Include="dbo\Tables\tb_CaracterEspecial.sql" />
+    <Build Include="dbo\Tables\mail_Parametro.sql" />
+    <Build Include="dbo\Tables\tb_Comprobante_Hist_Eliminado.sql" />
+    <Build Include="dbo\Tables\tb_Contribuyente_Hash.sql" />
+    <Build Include="dbo\Tables\tb_sis_Log_Error_Vzen.sql" />
+    <Build Include="dbo\Tables\tb_Tocken_x_Usuario_Tocken.sql" />
+    <Build Include="dbo\Tables\tb_Comprobante_tipo_estado.sql" />
+    <Build Include="dbo\Tables\mail_Catalogo_Tipo.sql" />
+    <Build Include="dbo\Views\vw_Comprobante.sql" />
+    <Build Include="dbo\Views\vw_comprobante_pendiente_de_Autorizacion_sri.sql" />
+    <Build Include="dbo\Views\vwtb_Comprobante_para_exportar.sql" />
+    <Build Include="dbo\Views\vw_Comprobante_Autorizados_Enviados_NoEnviados_mail.sql" />
+    <Build Include="dbo\Views\vwSerWeb_Comprobante.sql" />
+    <Build Include="dbo\Views\vw_Mensaje_x_Contribuyente.sql" />
+    <Build Include="dbo\Views\vw_mail_Cuentas_Correo_x_mail_Mensaje_Tipo.sql" />
+    <Build Include="dbo\Views\vw_Comprobante_Tipo.sql" />
+    <Build Include="dbo\Views\wv_mail_Cuentas_Correo_x_Empresa.sql" />
+    <Build Include="dbo\Views\vw_Comprobantes_recibidos.sql" />
+    <Build Include="dbo\Stored Procedures\sp_consulta_x_cbtes_x_paginas.sql" />
+    <Build Include="dbo\Stored Procedures\sp_RecuperaciondeContraseña.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Registro_Contribuyente.sql" />
+    <Build Include="dbo\Stored Procedures\sp_test.sql" />
+    <Build Include="dbo\Stored Procedures\sp_sys_recuperar_cbte_de_his_eliminado.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ValidarRegistros.sql" />
+    <Build Include="dbo\Stored Procedures\sp_VerificarRecuperaciondeContrasenia.sql" />
+    <Build Include="dbo\Stored Procedures\sp_sys_arregla_data.sql" />
+    <Build Include="dbo\Stored Procedures\sp_consulta_x_Mensaje_x_Pagina.sql" />
+    <Build Include="dbo\Stored Procedures\sp_consulta_x_Cbte_Recibidos_x_Pagina.sql" />
+    <Build Include="dbo\Stored Procedures\sp_consulta_x_CbteVALI_FIRM_REC_x_Pagina.sql" />
+    <Build Include="dbo\Tables\tb_FormaPago.sql" />
+    <Build Include="dbo\Tables\seg_usuario_x_tb_empresa.sql" />
+    <Build Include="dbo\Tables\seg_usuario.sql" />
+    <Build Include="dbo\Tables\seg_menu_x_tb_empresa_x_seg_usuario.sql" />
+    <Build Include="dbo\Tables\seg_menu_x_tb_empresa.sql" />
+    <Build Include="dbo\Tables\seg_menu.sql" />
+    <Build Include="dbo\Views\vwseg_usuario_x_tb_empresa.sql" />
+    <Build Include="dbo\Views\vwseg_menu_x_tb_empresa_x_seg_usuario.sql" />
+    <Build Include="dbo\Tables\tb_comprobante_x_valor.sql" />
+    <Build Include="dbo\Stored Procedures\actualizar_valores.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1.-Insert Data Catalogos.sql" />
+  </ItemGroup>
+</Project>

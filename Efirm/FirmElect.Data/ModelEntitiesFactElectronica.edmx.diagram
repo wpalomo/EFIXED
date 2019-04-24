@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="019cd3fdd7af448185bfe17266789c36" Name="Diagrama1" ZoomLevel="55">
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.mail_Catalogo" Width="1.5" PointX="6.2297411403757241" PointY="11.875344594882495" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.mail_Catalogo_Tipo" Width="1.5" PointX="10.999972337391215" PointY="3.1366878911558018" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.mail_Cuentas_Correo" Width="1.5" PointX="10.200168532412578" PointY="15.147723979851103" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.mail_Cuentas_Correo_x_Empresa" Width="1.5" PointX="0.51477845595906424" PointY="0.79304477609370128" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.mail_Mensaje" Width="1.5" PointX="2.6261385821859067" PointY="13.918014234825044" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.mail_Mensaje_Archi_Adjunto" Width="1.5" PointX="2.7853689374334034" PointY="31.254682257424427" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.mail_Mensaje_Tipo" Width="1.5" PointX="1.0668625445416489" PointY="29.059410496176877" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.mail_Parametro" Width="1.5" PointX="0.20553325684998802" PointY="7.2145646397092218" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.mail_plantilla_correo_x_cuenta" Width="1.5" PointX="8.2693065164002153" PointY="13.05722694706974" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Actividades_Horario" Width="1.5" PointX="6.8402345771157336" PointY="9.4656346633404649" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Actividades_Horario_Acciones" Width="1.5" PointX="0.078874781764519758" PointY="29.776676176943198" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Actividades_Horario_Tipo_Ejecucion" Width="1.5" PointX="3.3582334403685445" PointY="16.505147405203967" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Actividades_Horario_Tipo_Tiempo" Width="1.5" PointX="6.2207468944698334" PointY="25.337622177478682" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Catalogo" Width="1.5" PointX="1.0728073479015414" PointY="1.6252083189902866" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Catalogo_tipo" Width="1.5" PointX="7.7589759900043607" PointY="29.946139662501466" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Clave_Conting" Width="1.5" PointX="8.1365332697222641" PointY="7.2898221347899277" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Comprobante_estado_proceso" Width="1.5" PointX="2.2394629205760839" PointY="8.31868851572214" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_comprobante_exportado_base_ext" Width="1.5" PointX="3.7578879370158016" PointY="0.97970290527665194" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Comprobante_Hist_Eliminado" Width="1.5" PointX="11.973194103675519" PointY="21.2398850271664" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Comprobante_tipo" Width="1.5" PointX="6.5867657524471941" PointY="14.267111874309887" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Comprobante_tipo_estado" Width="1.5" PointX="0.68741848165514807" PointY="29.647257997490119" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Comprobante_tipo_x_empresa" Width="1.5" PointX="7.9309246986782753" PointY="30.460843636868915" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_comprobantes_No_Generados" Width="1.5" PointX="11.26243612880932" PointY="5.7412209835561088" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Contribuyente" Width="1.5" PointX="0.67859973603794344" PointY="20.914734552109024" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_directorio" Width="1.5" PointX="10.173606817691404" PointY="22.704785893999407" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Empresa_externa" Width="1.5" PointX="11.356992629988582" PointY="18.835966864058733" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Error_sri" Width="1.5" PointX="1.095020782712391" PointY="12.828112161172607" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_sis_Log_Error_Vzen" Width="1.5" PointX="4.6075891445426223" PointY="31.747534230233885" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Sucursal" Width="1.5" PointX="4.5384158010307774" PointY="9.05689655666095" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Tocken" Width="1.5" PointX="9.0827220683371284" PointY="0.13782836503248119" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Tocken_x_Usuario_Tocken" Width="1.5" PointX="3.8607720098741218" PointY="7.7831922954801431" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Usuario" Width="1.5" PointX="8.6578160154902442" PointY="24.229400169211161" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Usuario_Tocken" Width="1.5" PointX="10.947573802875155" PointY="21.071781138457254" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_mail_Catalogo_mail_Catalogo_Tipo" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_mail_Cuentas_Correo_x_Empresa_mail_Cuentas_Correo" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_mail_Mensaje_Archi_Adjunto_mail_Mensaje" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_mail_Mensaje_mail_Mensaje_Tipo" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_mail_Mensaje_tb_Contribuyente" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_tb_Actividades_Horario_Acciones_tb_Actividades_Horario" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_tb_Actividades_Horario_tb_Actividades_Horario_Tipo_Ejecucion" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_tb_Actividades_Horario_tb_Actividades_Horario_Tipo_Tiempo" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_tb_Catalogo_tb_Catalogo_tipo" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.vw_Comprobante_Autorizados_Enviados_NoEnviados_mail" Width="1.5" PointX="8.96284724630548" PointY="17.943220877062167" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.vw_comprobante_pendiente_de_Autorizacion_sri" Width="1.5" PointX="10.478835084698552" PointY="11.308031176826" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.vw_Comprobante_Tipo" Width="1.5" PointX="10.258505578273212" PointY="18.127814748383972" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.vw_Comprobantes_recibidos" Width="2.375" PointX="9.5" PointY="29.125" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.vw_mail_Cuentas_Correo_x_mail_Mensaje_Tipo" Width="1.5" PointX="11.930853383583415" PointY="31.775868087902605" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.vw_Mensaje_x_Contribuyente" Width="1.5" PointX="1.0561955557466465" PointY="30.992636158593296" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.vwSerWeb_Comprobante" Width="1.5" PointX="8.105017688174275" PointY="18.615174019064369" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.vwtb_Comprobante_para_exportar" Width="1.5" PointX="10.791172803748014" PointY="19.135934257477491" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.wv_mail_Cuentas_Correo_x_Empresa" Width="1.5" PointX="0.31675095870939596" PointY="23.512009721022103" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_FormaPago" Width="1.5" PointX="1.1041758494005425" PointY="21.955397988648805" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.vw_Comprobante" Width="1.5" PointX="0.42192830351271121" PointY="11.786168938403096" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.vwseg_menu_x_tb_empresa_x_seg_usuario" Width="1.5" PointX="6.8411624314455146" PointY="6.4147197932073476" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.seg_menu" Width="1.5" PointX="1.4555080986840223" PointY="2.6977501375124557" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.seg_menu_x_tb_empresa" Width="1.5" PointX="1.7222888384583819" PointY="24.250461485353512" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.seg_menu_x_tb_empresa_x_seg_usuario" Width="1.5" PointX="6.92090726034758" PointY="14.22597566909435" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_seg_menu_seg_menu" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_seg_menu_x_tb_empresa_seg_menu" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_seg_menu_x_tb_empresa_x_seg_usuario_seg_menu" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.vwseg_usuario_x_tb_empresa" Width="1.5" PointX="3.0111822704836646" PointY="11.989904722194144" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.seg_usuario" Width="1.5" PointX="10.979983716728157" PointY="20.671313429563916" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.seg_usuario_x_tb_empresa" Width="1.5" PointX="4.4818794897207432" PointY="25.398022231365566" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Empresa" Width="1.5" PointX="9.01154815452711" PointY="30.997006237039813" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_mail_Cuentas_Correo_x_Empresa_tb_Empresa" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_seg_menu_x_tb_empresa_tb_empresa" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_seg_menu_x_tb_empresa_x_seg_usuario_seg_usuario" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_seg_menu_x_tb_empresa_x_seg_usuario_tb_empresa" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_seg_usuario_x_tb_empresa_seg_usuario" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_seg_usuario_x_tb_empresa_tb_empresa" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_tb_Clave_Contin_tb_Empresa" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_tb_Sucursal_tb_Empresa" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Comprobante" Width="1.5" PointX="8.8901980281296176" PointY="2.03583785986334" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_tb_Comprobante_tb_Catalogo1" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_tb_Comprobante_tb_Comprobante_estado_proceso" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_tb_Comprobante_tb_Comprobante_tipo_estado" />
+        <AssociationConnector Association="DBFacturacion_ElectronicaModel.FK_tb_Comprobante_tb_Empresa" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_Parametro" Width="1.5" PointX="6.9913326199126118" PointY="11.432814707715444" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_comprobante_x_valor" Width="1.5" PointX="7.9231825526446027" PointY="6.2170061349016645" />
+        <EntityTypeShape EntityType="DBFacturacion_ElectronicaModel.tb_facturas_eventos" Width="1.5" PointX="11.592258257601531" PointY="31.247088998205534" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

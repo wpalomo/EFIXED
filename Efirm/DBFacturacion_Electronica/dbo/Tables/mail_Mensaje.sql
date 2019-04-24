@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[mail_Mensaje] (
+    [IdMensaje]             NUMERIC (18)    NOT NULL,
+    [Fecha]                 DATETIME        NOT NULL,
+    [Para]                  VARCHAR (MAX)   NULL,
+    [Asunto]                VARCHAR (300)   NULL,
+    [Asunto_texto_mostrado] VARCHAR (300)   NULL,
+    [Tiene_Adjunto]         BIT             NOT NULL,
+    [Prioridad]             INT             NOT NULL,
+    [Leido]                 BIT             NOT NULL,
+    [Respondido]            BIT             NOT NULL,
+    [No_Leido]              BIT             NOT NULL,
+    [Texto_mensaje]         VARCHAR (MAX)   NOT NULL,
+    [IdTipo_Mensaje]        VARCHAR (25)    NOT NULL,
+    [Eliminado]             BIT             NOT NULL,
+    [IdContribuyente]       NUMERIC (18)    NULL,
+    [mail_remitente]        VARCHAR (100)   NULL,
+    [Para_CC]               VARCHAR (MAX)   NULL,
+    [codMensajeId]          VARCHAR (MAX)   NULL,
+    [IdCuenta]              VARCHAR (50)    NULL,
+    [Archivo_correo]        VARBINARY (MAX) NULL,
+    [Para_CCO]              VARCHAR (MAX)   NULL,
+    CONSTRAINT [PK_mail_Mensaje] PRIMARY KEY CLUSTERED ([IdMensaje] ASC),
+    CONSTRAINT [FK_mail_Mensaje_mail_Mensaje_Tipo] FOREIGN KEY ([IdTipo_Mensaje]) REFERENCES [dbo].[mail_Mensaje_Tipo] ([IdTipo_Mensaje]),
+    CONSTRAINT [FK_mail_Mensaje_tb_Contribuyente] FOREIGN KEY ([IdContribuyente]) REFERENCES [dbo].[tb_Contribuyente] ([IdContribuyente])
+);
+

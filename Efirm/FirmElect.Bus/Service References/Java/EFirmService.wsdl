@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WS.firmaelectronica/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="EFirmService" targetNamespace="http://WS.firmaelectronica/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8094/Cal?xsd=1" namespace="http://WS.firmaelectronica/" />
+    </xsd:schema>
+  </types>
+  <message name="Firmar">
+    <part name="parameters" element="tns:Firmar" />
+  </message>
+  <message name="FirmarResponse">
+    <part name="parameters" element="tns:FirmarResponse" />
+  </message>
+  <message name="GetTokens">
+    <part name="parameters" element="tns:GetTokens" />
+  </message>
+  <message name="GetTokensResponse">
+    <part name="parameters" element="tns:GetTokensResponse" />
+  </message>
+  <message name="Login">
+    <part name="parameters" element="tns:Login" />
+  </message>
+  <message name="LoginResponse">
+    <part name="parameters" element="tns:LoginResponse" />
+  </message>
+  <message name="GetDatosUsuario">
+    <part name="parameters" element="tns:GetDatosUsuario" />
+  </message>
+  <message name="GetDatosUsuarioResponse">
+    <part name="parameters" element="tns:GetDatosUsuarioResponse" />
+  </message>
+  <message name="SetParametroProxyUser">
+    <part name="parameters" element="tns:SetParametroProxyUser" />
+  </message>
+  <message name="SetParametroProxyUserResponse">
+    <part name="parameters" element="tns:SetParametroProxyUserResponse" />
+  </message>
+  <message name="GetTiposAutentificacion">
+    <part name="parameters" element="tns:GetTiposAutentificacion" />
+  </message>
+  <message name="GetTiposAutentificacionResponse">
+    <part name="parameters" element="tns:GetTiposAutentificacionResponse" />
+  </message>
+  <message name="GetAutorizacionWS">
+    <part name="parameters" element="tns:GetAutorizacionWS" />
+  </message>
+  <message name="GetAutorizacionWSResponse">
+    <part name="parameters" element="tns:GetAutorizacionWSResponse" />
+  </message>
+  <message name="SetParametroProxyPort">
+    <part name="parameters" element="tns:SetParametroProxyPort" />
+  </message>
+  <message name="SetParametroProxyPortResponse">
+    <part name="parameters" element="tns:SetParametroProxyPortResponse" />
+  </message>
+  <message name="SetParametroUrlWSRecepcion">
+    <part name="parameters" element="tns:SetParametroUrlWSRecepcion" />
+  </message>
+  <message name="SetParametroUrlWSRecepcionResponse">
+    <part name="parameters" element="tns:SetParametroUrlWSRecepcionResponse" />
+  </message>
+  <message name="SetParametroAmbiente">
+    <part name="parameters" element="tns:SetParametroAmbiente" />
+  </message>
+  <message name="SetParametroAmbienteResponse">
+    <part name="parameters" element="tns:SetParametroAmbienteResponse" />
+  </message>
+  <message name="SetParametroProxyPass">
+    <part name="parameters" element="tns:SetParametroProxyPass" />
+  </message>
+  <message name="SetParametroProxyPassResponse">
+    <part name="parameters" element="tns:SetParametroProxyPassResponse" />
+  </message>
+  <message name="SetParametroProxyUrl">
+    <part name="parameters" element="tns:SetParametroProxyUrl" />
+  </message>
+  <message name="SetParametroProxyUrlResponse">
+    <part name="parameters" element="tns:SetParametroProxyUrlResponse" />
+  </message>
+  <message name="SetParametroUrlWSAutorizacion">
+    <part name="parameters" element="tns:SetParametroUrlWSAutorizacion" />
+  </message>
+  <message name="SetParametroUrlWSAutorizacionResponse">
+    <part name="parameters" element="tns:SetParametroUrlWSAutorizacionResponse" />
+  </message>
+  <portType name="EFirm">
+    <operation name="Firmar">
+      <input wsam:Action="http://WS.firmaelectronica/EFirm/FirmarRequest" message="tns:Firmar" />
+      <output wsam:Action="http://WS.firmaelectronica/EFirm/FirmarResponse" message="tns:FirmarResponse" />
+    </operation>
+    <operation name="GetTokens">
+      <input wsam:Action="http://WS.firmaelectronica/EFirm/GetTokensRequest" message="tns:GetTokens" />
+      <output wsam:Action="http://WS.firmaelectronica/EFirm/GetTokensResponse" message="tns:GetTokensResponse" />
+    </operation>
+    <operation name="Login">
+      <input wsam:Action="http://WS.firmaelectronica/EFirm/LoginRequest" message="tns:Login" />
+      <output wsam:Action="http://WS.firmaelectronica/EFirm/LoginResponse" message="tns:LoginResponse" />
+    </operation>
+    <operation name="GetDatosUsuario">
+      <input wsam:Action="http://WS.firmaelectronica/EFirm/GetDatosUsuarioRequest" message="tns:GetDatosUsuario" />
+      <output wsam:Action="http://WS.firmaelectronica/EFirm/GetDatosUsuarioResponse" message="tns:GetDatosUsuarioResponse" />
+    </operation>
+    <operation name="SetParametroProxyUser">
+      <input wsam:Action="http://WS.firmaelectronica/EFirm/SetParametroProxyUserRequest" message="tns:SetParametroProxyUser" />
+      <output wsam:Action="http://WS.firmaelectronica/EFirm/SetParametroProxyUserResponse" message="tns:SetParametroProxyUserResponse" />
+    </operation>
+    <operation name="GetTiposAutentificacion">
+      <input wsam:Action="http://WS.firmaelectronica/EFirm/GetTiposAutentificacionRequest" message="tns:GetTiposAutentificacion" />
+      <output wsam:Action="http://WS.firmaelectronica/EFirm/GetTiposAutentificacionResponse" message="tns:GetTiposAutentificacionResponse" />
+    </operation>
+    <operation name="GetAutorizacionWS">
+      <input wsam:Action="http://WS.firmaelectronica/EFirm/GetAutorizacionWSRequest" message="tns:GetAutorizacionWS" />
+      <output wsam:Action="http://WS.firmaelectronica/EFirm/GetAutorizacionWSResponse" message="tns:GetAutorizacionWSResponse" />
+    </operation>
+    <operation name="SetParametroProxyPort">
+      <input wsam:Action="http://WS.firmaelectronica/EFirm/SetParametroProxyPortRequest" message="tns:SetParametroProxyPort" />
+      <output wsam:Action="http://WS.firmaelectronica/EFirm/SetParametroProxyPortResponse" message="tns:SetParametroProxyPortResponse" />
+    </operation>
+    <operation name="SetParametroUrlWSRecepcion">
+      <input wsam:Action="http://WS.firmaelectronica/EFirm/SetParametroUrlWSRecepcionRequest" message="tns:SetParametroUrlWSRecepcion" />
+      <output wsam:Action="http://WS.firmaelectronica/EFirm/SetParametroUrlWSRecepcionResponse" message="tns:SetParametroUrlWSRecepcionResponse" />
+    </operation>
+    <operation name="SetParametroAmbiente">
+      <input wsam:Action="http://WS.firmaelectronica/EFirm/SetParametroAmbienteRequest" message="tns:SetParametroAmbiente" />
+      <output wsam:Action="http://WS.firmaelectronica/EFirm/SetParametroAmbienteResponse" message="tns:SetParametroAmbienteResponse" />
+    </operation>
+    <operation name="SetParametroProxyPass">
+      <input wsam:Action="http://WS.firmaelectronica/EFirm/SetParametroProxyPassRequest" message="tns:SetParametroProxyPass" />
+      <output wsam:Action="http://WS.firmaelectronica/EFirm/SetParametroProxyPassResponse" message="tns:SetParametroProxyPassResponse" />
+    </operation>
+    <operation name="SetParametroProxyUrl">
+      <input wsam:Action="http://WS.firmaelectronica/EFirm/SetParametroProxyUrlRequest" message="tns:SetParametroProxyUrl" />
+      <output wsam:Action="http://WS.firmaelectronica/EFirm/SetParametroProxyUrlResponse" message="tns:SetParametroProxyUrlResponse" />
+    </operation>
+    <operation name="SetParametroUrlWSAutorizacion">
+      <input wsam:Action="http://WS.firmaelectronica/EFirm/SetParametroUrlWSAutorizacionRequest" message="tns:SetParametroUrlWSAutorizacion" />
+      <output wsam:Action="http://WS.firmaelectronica/EFirm/SetParametroUrlWSAutorizacionResponse" message="tns:SetParametroUrlWSAutorizacionResponse" />
+    </operation>
+  </portType>
+  <binding name="EFirmPortBinding" type="tns:EFirm">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Firmar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetTokens">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetDatosUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SetParametroProxyUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetTiposAutentificacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAutorizacionWS">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SetParametroProxyPort">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SetParametroUrlWSRecepcion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SetParametroAmbiente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SetParametroProxyPass">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SetParametroProxyUrl">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SetParametroUrlWSAutorizacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EFirmService">
+    <port name="EFirmPort" binding="tns:EFirmPortBinding">
+      <soap:address location="http://localhost:8094/Cal" />
+    </port>
+  </service>
+</definitions>

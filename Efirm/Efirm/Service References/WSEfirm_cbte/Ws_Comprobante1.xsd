@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1601/Ws_Comprobante.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/FirmElect.Info" />
+  <xs:element name="Lista_TipoComprobantes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MensajeErrorOut" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lista_TipoComprobantesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/FirmElect.Info" minOccurs="0" name="Lista_TipoComprobantesResult" nillable="true" type="q1:ArrayOftb_Catalogo_Info" />
+        <xs:element minOccurs="0" name="MensajeErrorOut" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultar_listado_comprobantes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="cedulaRuc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TipoComprobante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FecIni" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FecFin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="buscar" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Indice_Pagina" type="xs:int" />
+        <xs:element minOccurs="0" name="Tamanio_Pagina" type="xs:int" />
+        <xs:element minOccurs="0" name="mensajeErrorOut" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultar_listado_comprobantesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/FirmElect.Info" minOccurs="0" name="consultar_listado_comprobantesResult" nillable="true" type="q2:ArrayOftb_Comprobante_Info" />
+        <xs:element minOccurs="0" name="mensajeErrorOut" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="cedulaRuc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdComprobante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mensajeErrorOut" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getXMLResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mensajeErrorOut" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getRide_Pdf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="cedulaRuc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdComprobante" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getRide_PdfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getRide_PdfResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
